@@ -35,4 +35,7 @@ public interface UserMapper {
 
     // 新增用户（带主键值，方式2）
     int insert3(SysUser sysUser);
+
+    // 根据主键更新
+    int updateById(SysUser sysUser);
 }

@@ -187,4 +187,37 @@ public class UserMapperTest extends BaseMapperTest {
         }
     }
 
+    @Test
+    public void testUpdateById() {
+        SqlSession sqlSession = getSqlSession();
+
+        try {
+            // 获取UserMapper接口
+            UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+
+            // 从数据库查询一个用户
+            SysUser user = userMapper.selectById(1L);
+            // 当前用户名为admin
+            Assert.assertEquals("admin", user.getUserName());
+
+            user.setUserName("admin_test");
+            user.setUserEmail("test@163.com");
+
+            // 更新数据，获取受影响行数
+            int effectCount = userMapper.updateById(user);
+            // 受响应行数必须是1
+            Assert.assertEquals(1, effectCount);
+
+            // 根据当前id查询修改后的数据
+            user = userMapper.selectById(1L);
+            // 修改后的名字是admin_test
+            Assert.assertEquals("admin_test", user.getUserName());
+        } finally {
+            // 为了不影响其他测试，此处选择回滚
+            // 默认openSession()是不自动提交的，不回滚也不会提交到数据库
+            sqlSession.rollback();
+            sqlSession.close();
+        }
+    }
+
 }
