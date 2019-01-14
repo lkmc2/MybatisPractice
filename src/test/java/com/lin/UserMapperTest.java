@@ -1,6 +1,8 @@
 package com.lin;
 
 import com.lin.mapper.UserMapper;
+import com.lin.model.SysRole;
+import com.lin.model.SysRoleExtend;
 import com.lin.model.SysUser;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Assert;
@@ -36,6 +38,34 @@ public class UserMapperTest extends BaseMapperTest {
             UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
             // 查询所有用户
             List<SysUser> userList = userMapper.selectAll();
+            // 用户列表必须非空
+            Assert.assertNotNull(userList);
+            // 用户数量大于0
+            Assert.assertTrue(userList.size() > 0);
+        }
+    }
+
+    @Test
+    public void testSelectRolesByUserId() {
+        try(SqlSession sqlSession = getSqlSession()) {
+            // 获取UserMapper接口
+            UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+            // 查询所有用户
+            List<SysRole> userList = userMapper.selectRolesByUserId(1L);
+            // 用户列表必须非空
+            Assert.assertNotNull(userList);
+            // 用户数量大于0
+            Assert.assertTrue(userList.size() > 0);
+        }
+    }
+
+    @Test
+    public void testSelectRolesAndUserNameByUserId() {
+        try(SqlSession sqlSession = getSqlSession()) {
+            // 获取UserMapper接口
+            UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+            // 查询所有用户
+            List<SysRoleExtend> userList = userMapper.selectRolesAndUserNameByUserId(1L);
             // 用户列表必须非空
             Assert.assertNotNull(userList);
             // 用户数量大于0
