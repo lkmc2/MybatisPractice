@@ -14,6 +14,7 @@ public class SysRole {
     private Integer enabled;
     private Integer createBy;
     private Date createTime;
+    private SysUser user; // 用户信息
 
     public Long getId() {
         return id;

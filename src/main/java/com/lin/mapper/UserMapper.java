@@ -23,4 +23,7 @@ public interface UserMapper {
 
     // 根据用户id获取角色信息，并带有当前用户名
     List<SysRoleExtend> selectRolesAndUserNameByUserId(Long userId);
+
+    // 根据用户id获取角色信息，并带有当前用户名（方式2）
+    List<SysRole> selectRolesAndUserNameByUserId2(Long userId);
 }

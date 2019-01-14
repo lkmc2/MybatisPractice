@@ -50,7 +50,7 @@ public class UserMapperTest extends BaseMapperTest {
         try(SqlSession sqlSession = getSqlSession()) {
             // 获取UserMapper接口
             UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
-            // 查询所有用户
+            // 根据用户id获取角色信息
             List<SysRole> userList = userMapper.selectRolesByUserId(1L);
             // 用户列表必须非空
             Assert.assertNotNull(userList);
@@ -64,8 +64,22 @@ public class UserMapperTest extends BaseMapperTest {
         try(SqlSession sqlSession = getSqlSession()) {
             // 获取UserMapper接口
             UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
-            // 查询所有用户
+            // 根据用户id获取角色信息，并带有当前用户名
             List<SysRoleExtend> userList = userMapper.selectRolesAndUserNameByUserId(1L);
+            // 用户列表必须非空
+            Assert.assertNotNull(userList);
+            // 用户数量大于0
+            Assert.assertTrue(userList.size() > 0);
+        }
+    }
+
+    @Test
+    public void testSelectRolesAndUserNameByUserId2() {
+        try(SqlSession sqlSession = getSqlSession()) {
+            // 获取UserMapper接口
+            UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+            // 根据用户id获取角色信息，并带有当前用户名
+            List<SysRole> userList = userMapper.selectRolesAndUserNameByUserId2(1L);
             // 用户列表必须非空
             Assert.assertNotNull(userList);
             // 用户数量大于0
