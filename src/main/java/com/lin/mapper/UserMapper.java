@@ -26,4 +26,10 @@ public interface UserMapper {
 
     // 根据用户id获取角色信息，并带有当前用户名（方式2）
     List<SysRole> selectRolesAndUserNameByUserId2(Long userId);
+
+    // 新增用户
+    int insert(SysUser sysUser);
+
+    // 新增用户（带主键）
+    int insert2(SysUser sysUser);
 }
