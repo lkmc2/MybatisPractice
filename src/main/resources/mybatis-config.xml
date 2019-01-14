@@ -6,6 +6,8 @@
     <!--配置日志输出-->
     <settings>
         <setting name="logImpl" value="LOG4J"/>
+        <!--让数据库带下划线的字段自动转换成驼峰命名-->
+        <!--<setting name="mapUnderscoreToCamelCase" value="true"/>-->
     </settings>
 
     <!--配置一个包的别名，这样返回值可以只写类名，不写包名-->
@@ -30,7 +32,15 @@
 
     <!--Mapper文件的路径-->
     <mappers>
-        <mapper resource="com/lin/mapper/CountryMapper.xml"/>
+        <!--<mapper resource="com/lin/mapper/CountryMapper.xml"/>-->
+        <!--<mapper resource="com/lin/mapper/UserMapper.xml"/>-->
+        <!--<mapper resource="com/lin/mapper/RoleMapper.xml"/>-->
+        <!--<mapper resource="com/lin/mapper/PrivilegeMapper.xml"/>-->
+        <!--<mapper resource="com/lin/mapper/UserRoleMapper.xml"/>-->
+        <!--<mapper resource="com/lin/mapper/RolePrivilegeMapper.xml"/>-->
+
+        <!--package指定扫描某个表下的所有文件，等效于写上面一堆mapper标签-->
+        <package name="com.lin.mapper"/>
     </mappers>
 
 </configuration>
