@@ -154,4 +154,37 @@ public class UserMapperTest extends BaseMapperTest {
         }
     }
 
+    @Test
+    public void testInsert3() {
+        SqlSession sqlSession = getSqlSession();
+
+        try {
+            // 获取UserMapper接口
+            UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+
+            // 创建一个用户对象
+            SysUser user = new SysUser();
+            user.setUserName("tests1");
+            user.setUserPassword("123456");
+            user.setUserEmail("test1@163.com");
+            user.setUserInfo("test info");
+
+            // 正常情况下应该读入一张图片存到byte数组中
+            user.setHeadImg(new byte[]{1, 2, 3});
+            user.setCreateTime(new Date());
+
+            // 插入用户，获取受影响行数
+            int effectCount = userMapper.insert3(user);
+            // 受影响行数必须为1
+            Assert.assertEquals(1, effectCount);
+            // 因为用户id从数据库获取id后回写，此值不为空
+            Assert.assertNotNull(user.getId());
+        } finally {
+            // 为了不影响其他测试，此处选择回滚
+            // 默认openSession()是不自动提交的，不回滚也不会提交到数据库
+            sqlSession.rollback();
+            sqlSession.close();
+        }
+    }
+
 }

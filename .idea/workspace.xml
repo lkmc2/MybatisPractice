@@ -55,8 +55,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/lin/mapper/UserMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
+            <state relative-caret-position="351">
+              <caret line="35" column="21" lean-forward="true" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -67,8 +67,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/com/lin/mapper/UserMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="90" column="62" selection-start-line="90" selection-start-column="62" selection-end-line="90" selection-end-column="62" />
+            <state relative-caret-position="256">
+              <caret line="109" column="37" lean-forward="true" selection-start-line="109" selection-start-column="37" selection-end-line="109" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -76,8 +76,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/lin/UserMapperTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="146" column="38" selection-start-line="146" selection-start-column="38" selection-end-line="146" selection-end-column="38" />
+            <state relative-caret-position="332">
+              <caret line="173" column="43" lean-forward="true" selection-start-line="173" selection-start-column="43" selection-end-line="173" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -301,7 +301,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547476941667" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547477520131" />
     <property name="database.console.LAST_STATE" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -330,23 +330,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UserMapperTest.testInsert2">
-    <configuration name="UserMapperTest.selectRolesByUserId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MybatisPractice" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.lin.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.lin" />
-      <option name="MAIN_CLASS_NAME" value="com.lin.UserMapperTest" />
-      <option name="METHOD_NAME" value="selectRolesByUserId" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.UserMapperTest.testInsert3">
     <configuration name="UserMapperTest.testInsert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MybatisPractice" />
       <extension name="coverage">
@@ -374,6 +358,22 @@
       <option name="PACKAGE_NAME" value="com.lin" />
       <option name="MAIN_CLASS_NAME" value="com.lin.UserMapperTest" />
       <option name="METHOD_NAME" value="testInsert2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserMapperTest.testInsert3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MybatisPractice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lin.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.lin" />
+      <option name="MAIN_CLASS_NAME" value="com.lin.UserMapperTest" />
+      <option name="METHOD_NAME" value="testInsert3" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -413,11 +413,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserMapperTest.testInsert3" />
         <item itemvalue="JUnit.UserMapperTest.testInsert2" />
         <item itemvalue="JUnit.UserMapperTest.testInsert" />
         <item itemvalue="JUnit.UserMapperTest.testSelectRolesAndUserNameByUserId2" />
         <item itemvalue="JUnit.UserMapperTest.testSelectRolesAndUserNameByUserId" />
-        <item itemvalue="JUnit.UserMapperTest.selectRolesByUserId" />
       </list>
     </recent_temporary>
   </component>
@@ -431,7 +431,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1547452865585</updated>
-      <workItem from="1547452870347" duration="15975000" />
+      <workItem from="1547452870347" duration="16524000" />
     </task>
     <task id="LOCAL-00001" summary="添加Mybatis配置文件">
       <created>1547454834050</created>
@@ -468,16 +468,17 @@
       <option name="project" value="LOCAL" />
       <updated>1547467909305</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="添加使用insert插入的例子">
+      <created>1547477004634</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1547477004634</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UserMapperTest_selectRolesByUserId - 2019.01.14 at 19h 53m 29s.xml">
-      <configuration name="UserMapperTest.selectRolesByUserId" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserMapperTest_testSelectRolesAndUserNameByUserId - 2019.01.14 at 20h 00m 50s.xml">
-      <configuration name="UserMapperTest.testSelectRolesAndUserNameByUserId" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="UserMapperTest_testSelectRolesAndUserNameByUserId2 - 2019.01.14 at 20h 07m 37s.xml">
       <configuration name="UserMapperTest.testSelectRolesAndUserNameByUserId2" configurationId="JUnit" />
     </history-entry>
@@ -502,9 +503,15 @@
     <history-entry file="UserMapperTest_testInsert - 2019.01.14 at 22h 16m 57s.xml">
       <configuration name="UserMapperTest.testInsert" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="UserMapperTest_testInsert2 - 2019.01.14 at 22h 42m 08s.xml">
+      <configuration name="UserMapperTest.testInsert2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserMapperTest_testInsert2 - 2019.01.14 at 22h 42m 27s.xml">
+      <configuration name="UserMapperTest.testInsert2" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14231000" />
+    <option name="totallyTimeSpent" value="14780000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="673" y="0" width="774" height="907" extended-state="0" />
@@ -556,7 +563,8 @@
     <MESSAGE value="添加用户数据库接口，并进行测试" />
     <MESSAGE value="添加根据用户id获取角色信息，并带有当前用户名的例子" />
     <MESSAGE value="添加根据用户id获取角色信息，并带有当前用户名的例子（方式2）" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加根据用户id获取角色信息，并带有当前用户名的例子（方式2）" />
+    <MESSAGE value="添加使用insert插入的例子" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加使用insert插入的例子" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/dataSources.local.xml">
@@ -831,27 +839,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/lin/mapper/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="109" column="37" lean-forward="true" selection-start-line="109" selection-start-column="37" selection-end-line="109" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lin/mapper/UserMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
+        <state relative-caret-position="351">
+          <caret line="35" column="21" lean-forward="true" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/lin/mapper/UserMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="90" column="62" selection-start-line="90" selection-start-column="62" selection-end-line="90" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/lin/UserMapperTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="146" column="38" selection-start-line="146" selection-start-column="38" selection-end-line="146" selection-end-column="38" />
+        <state relative-caret-position="332">
+          <caret line="173" column="43" lean-forward="true" selection-start-line="173" selection-start-column="43" selection-end-line="173" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

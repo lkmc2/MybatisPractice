@@ -102,4 +102,23 @@
         )
     </insert>
 
+    <!--配置useGeneratedKeys为true，会把数据库的主键的值设置到keyProperty指定的id属性上-->
+    <!--因为mysql中insert成功之后才能获取到主键值，所以order是after-->
+    <!--select LAST_INSERT_ID() 获取上一次插入的ID，每个数据库使用的函数都不一样-->
+    <insert id="insert3">
+        insert into sys_user (
+            user_name, user_password,
+            user_email, user_info,
+            head_img, create_time
+        )
+        values (
+           #{userName}, #{userPassword},
+           #{userEmail}, #{userInfo},
+           #{headImg, jdbcType=BLOB},#{createTime, jdbcType=TIMESTAMP}
+       )
+       <selectKey keyColumn="id" resultType="long" keyProperty="id" order="AFTER">
+           select LAST_INSERT_ID()
+       </selectKey>
+    </insert>
+
 </mapper>
