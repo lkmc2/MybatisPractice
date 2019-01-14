@@ -255,4 +255,40 @@ public class UserMapperTest extends BaseMapperTest {
         }
     }
 
+    @Test
+    public void testSelectRolesByUserIdAndRoleEnabled() {
+        try(SqlSession sqlSession = getSqlSession()) {
+            // 获取UserMapper接口
+            UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+            // 根据用户id和角色的enabled状态获取用户的角色
+            List<SysRole> userList = userMapper.selectRolesByUserIdAndRoleEnabled(1L, 1);
+            // 用户列表必须非空
+            Assert.assertNotNull(userList);
+            // 用户数量大于0
+            Assert.assertTrue(userList.size() > 0);
+        }
+    }
+
+    @Test
+    public void testSelectRolesByUserAndRole() {
+        try(SqlSession sqlSession = getSqlSession()) {
+            // 获取UserMapper接口
+            UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+
+            // 设置用户id
+            SysUser user = new SysUser();
+            user.setId(1L);
+            // 设置角色启用
+            SysRole role = new SysRole();
+            role.setEnabled(1);
+
+            // 根据用户id和角色的enabled状态获取用户的角色
+            List<SysRole> userList = userMapper.selectRolesByUserAndRole(user, role);
+            // 用户列表必须非空
+            Assert.assertNotNull(userList);
+            // 用户数量大于0
+            Assert.assertTrue(userList.size() > 0);
+        }
+    }
+
 }
