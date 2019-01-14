@@ -38,4 +38,10 @@ public interface UserMapper {
 
     // 根据主键更新
     int updateById(SysUser sysUser);
+
+    // 根据主键删除
+    int deleteById(Long id);
+
+    // 根据主键删除（方法名相同时，会同时匹配xml中的同一个delete标签）
+    int deleteById(SysUser sysUser);
 }

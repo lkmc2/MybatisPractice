@@ -220,4 +220,39 @@ public class UserMapperTest extends BaseMapperTest {
         }
     }
 
+    @Test
+    public void testDeleteById() {
+        SqlSession sqlSession = getSqlSession();
+
+        try {
+            // 获取UserMapper接口
+            UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+
+            // 从数据库查询一个用户
+            SysUser user1 = userMapper.selectById(1L);
+            // 此时用户非空
+            Assert.assertNotNull(user1);
+
+            // 调用方法删除
+            Assert.assertEquals(1, userMapper.deleteById(1L));
+            // 再次查询，此时应该为null
+            Assert.assertNull(userMapper.selectById(1L));
+
+            // 从数据库查询一个用户
+            SysUser user2 = userMapper.selectById(1001L);
+            // 此时用户非空
+            Assert.assertNotNull(user2);
+
+            // 调用方法删除
+            Assert.assertEquals(1, userMapper.deleteById(user2));
+            // 再次查询，此时应该为null
+            Assert.assertNull(userMapper.selectById(1L));
+        } finally {
+            // 为了不影响其他测试，此处选择回滚
+            // 默认openSession()是不自动提交的，不回滚也不会提交到数据库
+            sqlSession.rollback();
+            sqlSession.close();
+        }
+    }
+
 }
