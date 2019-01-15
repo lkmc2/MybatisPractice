@@ -214,4 +214,29 @@
         where id = #{id}
     </update>
 
+    <!--使用choose when otherwise标签可以进行动态选择要执行的语句-->
+    <select id="selectByIdOrUserName" resultType="com.lin.model.SysUser">
+        select
+            id,
+            user_name userName,
+            user_password userPassword,
+            user_email userEmail,
+            user_info userInfo,
+            head_img headImg,
+            create_time createTime
+        from sys_user
+        where 1 = 1
+        <choose>
+            <when test="id != null">
+                and id = #{id}
+            </when>
+            <when test="userName != null and userName != ''">
+                and user_name = #{userName}
+            </when>
+            <otherwise>
+                and 1 = 2
+            </otherwise>
+        </choose>
+    </select>
+
 </mapper>

@@ -65,4 +65,7 @@ public interface UserMapper {
 
     // 根据id选择性更新属性
     int updateByIdSelective(SysUser sysUser);
+
+    // 根据用户id或用户名查询
+    SysUser selectByIdOrUserName(SysUser sysUser);
 }
