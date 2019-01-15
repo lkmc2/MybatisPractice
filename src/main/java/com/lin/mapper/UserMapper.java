@@ -78,4 +78,7 @@ public interface UserMapper {
 
     // 通过Map更新列
     int updateByMap(Map<String, Object> map);
+
+    // 根据用户id获取用户信息和用户的角色信息
+    SysUser selectUserAndRoleById(Long id);
 }

@@ -17,6 +17,8 @@ public class SysUser {
     private byte[] headImg; // byte[]可以对应blob等二进制类型
     private Date createTime;
 
+    private SysRole role; // 用户角色
+
     public Long getId() {
         return id;
     }
@@ -71,5 +73,13 @@ public class SysUser {
 
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
+    }
+
+    public SysRole getRole() {
+        return role;
+    }
+
+    public void setRole(SysRole role) {
+        this.role = role;
     }
 }

@@ -308,4 +308,25 @@
         where id = #{id}
     </update>
 
+    <!--r.id "role.id"是把该字段赋值给类中的role属性的id字段-->
+    <select id="selectUserAndRoleById" resultType="com.lin.model.SysUser">
+        select
+            u.id,
+            u.user_name userName,
+            u.user_password userPassword,
+            u.user_email userEmail,
+            u.user_info userInfo,
+            u.head_img headImg,
+            u.create_time createTime,
+            r.id "role.id",
+            r.role_name "role.roleName",
+            r.enabled "role.enabled",
+            r.create_by "role.createBy",
+            r.create_time "role.createTime"
+        from sys_user u
+        inner join sys_user_role ur on u.id = ur.user_id
+        inner join sys_role r on ur.role_id = r.id
+        where u.id = #{id}
+    </select>
+
 </mapper>
