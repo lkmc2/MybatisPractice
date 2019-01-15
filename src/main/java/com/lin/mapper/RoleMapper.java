@@ -1,10 +1,7 @@
 package com.lin.mapper;
 
 import com.lin.model.SysRole;
-import org.apache.ibatis.annotations.Result;
-import org.apache.ibatis.annotations.ResultMap;
-import org.apache.ibatis.annotations.Results;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
@@ -46,4 +43,27 @@ public interface RoleMapper {
     @ResultMap("roleResultMap")
     @Select("select * from sys_role")
     List<SysRole> selectAll();
+
+    // 将角色插入数据库，不返回主键
+    @Insert({"insert into sys_role(id, role_name, enabled, create_by, create_time) ",
+            "values(#{id}, #{roleName}, #{enabled}, #{createBy},",
+            "#{createTime, jdbcType=TIMESTAMP})"})
+    int insert(SysRole sysRole);
+
+    // 将角色插入数据库（方式2，返回自增主键，使用useGeneratedKeys获取key值，并设置到id属性上）
+    @Insert({"insert into sys_role(role_name, enabled, create_by, create_time) ",
+             "values(#{roleName}, #{enabled}, #{createBy},",
+                    "#{createTime, jdbcType=TIMESTAMP})"})
+    @Options(useGeneratedKeys = true, keyProperty = "id")
+    int insert2(SysRole sysRole);
+
+    // 将角色插入数据库（方式3，返回非自增主键，使用SELECT LAST_INSERT_ID()获取key值，并设置到id属性上）
+    @Insert({"insert into sys_role(role_name, enabled, create_by, create_time) ",
+            "values(#{roleName}, #{enabled}, #{createBy},",
+            "#{createTime, jdbcType=TIMESTAMP})"})
+    @SelectKey(statement = "SELECT LAST_INSERT_ID()",
+               keyProperty = "id",
+               resultType = Long.class,
+               before = false) // before为false等效于xml中order为AFTER
+    int insert3(SysRole sysRole);
 }
