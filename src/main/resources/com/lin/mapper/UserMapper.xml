@@ -162,7 +162,7 @@
         where u.id = #{user.id} and r.enabled = #{role.enabled}
     </select>
 
-    <!--此时不满足要求，因为只有用户名和邮箱都存在的时候才能使用-->
+    <!--property != null所有属性都可以使用，property != ''只有字符串可以使用，条件间的连接符使用and或or-->
     <select id="selectByUser" resultType="com.lin.model.SysUser">
         select
            id,
@@ -173,8 +173,13 @@
            head_img headImg,
            create_time createTime
         from sys_user
-        where user_name like concat('%', #{userName}, '%')
-              and user_email = #{userEmail}
+        where 1 = 1
+        <if test="userName != null and userName != ''">
+            and user_name like concat('%', #{userName}, '%')
+        </if>
+        <if test="userEmail != null and userEmail != ''">
+            and user_email = #{userEmail}
+        </if>
     </select>
 
 </mapper>
