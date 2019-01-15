@@ -16,14 +16,7 @@
     </resultMap>
 
     <!--用户角色映射Map-->
-    <resultMap id="userRoleMap" type="com.lin.model.SysUser">
-        <id property="id" column="id"/>
-        <result property="userName" column="user_name"/>
-        <result property="userPassword" column="user_password"/>
-        <result property="userEmail" column="user_email"/>
-        <result property="userInfo" column="user_info"/>
-        <result property="headImg" column="head_img" jdbcType="BLOB"/>
-        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+    <resultMap id="userRoleMap" extends="userMap" type="com.lin.model.SysUser">
         <!--role相关属性-->
         <result property="role.id" column="role_id"/>
         <result property="role.roleName" column="role_name"/>
