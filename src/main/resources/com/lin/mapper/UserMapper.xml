@@ -193,6 +193,20 @@
         </where>
     </select>
 
+    <!--指定databaseId可以针对不同的数据库编写不同的语句，有databaseId的标签优先级比没有databaseId的级别要高-->
+    <select id="selectByUser" databaseId="mysql">
+        select *
+        from sys_user
+        where user_name like concat('%', #{userName}, '%')
+    </select>
+
+    <!--为Oracle指定该方法的实现语句-->
+    <select id="selectByUser" databaseId="oracle">
+        select *
+        from sys_user
+        where user_name like '%'||#{userName}||'%'
+    </select>
+
     <!--set标签可以自动把最后的多余逗号删除，最后加上id = #{id}，防止所有条件为null时出错-->
     <update id="updateByIdSelective">
         update sys_user
