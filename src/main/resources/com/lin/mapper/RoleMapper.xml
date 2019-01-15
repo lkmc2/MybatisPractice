@@ -3,5 +3,13 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.lin.mapper.RoleMapper">
-
+    <!--返回值角色类映射关系Map-->
+    <resultMap id="roleMap" type="com.lin.model.SysRole">
+        <!--role相关属性-->
+        <result property="id" column="id"/>
+        <result property="roleName" column="role_name"/>
+        <result property="enabled" column="enabled"/>
+        <result property="createBy" column="create_by"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
 </mapper>

@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c8f0665e-147f-4556-982f-86ef8922dd92" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lin/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lin/mapper/UserMapper.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -68,8 +67,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/com/lin/mapper/UserMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="358" column="42" lean-forward="true" selection-start-line="358" selection-start-column="42" selection-end-line="358" selection-end-column="42" />
+            <state relative-caret-position="228">
+              <caret line="27" column="20" lean-forward="true" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -77,8 +76,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/lin/mapper/UserMapperTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="465" column="9" lean-forward="true" selection-start-line="465" selection-start-column="9" selection-end-line="465" selection-end-column="9" />
+            <state relative-caret-position="497">
+              <caret line="480" selection-start-line="480" selection-end-line="480" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -343,7 +342,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547562936029" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547563241595" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="database.console.LAST_STATE" value="false" />
@@ -493,7 +492,7 @@
       <option name="presentableId" value="Default" />
       <updated>1547452865585</updated>
       <workItem from="1547452870347" duration="19651000" />
-      <workItem from="1547517434089" duration="24659000" />
+      <workItem from="1547517434089" duration="24921000" />
     </task>
     <task id="LOCAL-00001" summary="添加Mybatis配置文件">
       <created>1547454834050</created>
@@ -754,16 +753,24 @@
       <option name="project" value="LOCAL" />
       <updated>1547562583588</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="使用association标签简化resultMap中一对一的写法">
+      <created>1547562954438</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1547562954438</updated>
+    </task>
+    <task id="LOCAL-00039" summary="将association标签中的role属性提取到单独的resultMap中">
+      <created>1547563157779</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1547563157779</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UserMapperTest_testSelectByUser - 2019.01.15 at 19h 00m 27s.xml">
-      <configuration name="UserMapperTest.testSelectByUser" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CountryMapperTest_testExample - 2019.01.15 at 20h 12m 02s.xml">
-      <configuration name="CountryMapperTest.testExample" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="CountryMapperTest_testExample - 2019.01.15 at 20h 12m 29s.xml">
       <configuration name="CountryMapperTest.testExample" configurationId="JUnit" />
     </history-entry>
@@ -788,9 +795,15 @@
     <history-entry file="UserMapperTest_testSelectUserAndRoleById2 - 2019.01.15 at 22h 29m 03s.xml">
       <configuration name="UserMapperTest.testSelectUserAndRoleById2" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="UserMapperTest_testSelectUserAndRoleById2 - 2019.01.15 at 22h 35m 03s.xml">
+      <configuration name="UserMapperTest.testSelectUserAndRoleById2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserMapperTest_testSelectUserAndRoleById2 - 2019.01.15 at 22h 35m 22s.xml">
+      <configuration name="UserMapperTest.testSelectUserAndRoleById2" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42566000" />
+    <option name="totallyTimeSpent" value="42828000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -885,8 +898,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="添加使用@Results注解来表示resultMap的例子" />
-    <MESSAGE value="使用@ResultMap注解，复用@Results注解声明的resultMap" />
     <MESSAGE value="添加@Insert、@Options、@SelectKey注解的使用例子" />
     <MESSAGE value="添加使用@Update注解的例子" />
     <MESSAGE value="添加使用@Delete注解的例子" />
@@ -910,7 +921,9 @@
     <MESSAGE value="添加一对一映射的例子" />
     <MESSAGE value="添加使用resultMap的一对一映射的例子" />
     <MESSAGE value="使用继承复用，减少resultMap的代码量" />
-    <option name="LAST_COMMIT_MESSAGE" value="使用继承复用，减少resultMap的代码量" />
+    <MESSAGE value="使用association标签简化resultMap中一对一的写法" />
+    <MESSAGE value="将association标签中的role属性提取到单独的resultMap中" />
+    <option name="LAST_COMMIT_MESSAGE" value="将association标签中的role属性提取到单独的resultMap中" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -1294,15 +1307,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/com/lin/mapper/UserMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="358" column="42" lean-forward="true" selection-start-line="358" selection-start-column="42" selection-end-line="358" selection-end-column="42" />
+        <state relative-caret-position="228">
+          <caret line="27" column="20" lean-forward="true" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/lin/mapper/UserMapperTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="465" column="9" lean-forward="true" selection-start-line="465" selection-start-column="9" selection-end-line="465" selection-end-column="9" />
+        <state relative-caret-position="497">
+          <caret line="480" selection-start-line="480" selection-end-line="480" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
