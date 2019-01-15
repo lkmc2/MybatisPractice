@@ -17,12 +17,15 @@
 
     <!--用户角色映射Map-->
     <resultMap id="userRoleMap" extends="userMap" type="com.lin.model.SysUser">
-        <!--role相关属性-->
-        <result property="role.id" column="role_id"/>
-        <result property="role.roleName" column="role_name"/>
-        <result property="role.enabled" column="enabled"/>
-        <result property="role.createBy" column="create_by"/>
-        <result property="role.createTime" column="role_create_time" jdbcType="TIMESTAMP"/>
+        <!--使用association标签表示一对一关系，让user的成员变量role与角色表自动关联，columnPrefix是前缀-->
+        <association property="role" columnPrefix="role_" javaType="com.lin.model.SysRole">
+            <!--role相关属性-->
+            <result property="id" column="id"/>
+            <result property="roleName" column="role_name"/>
+            <result property="enabled" column="enabled"/>
+            <result property="createBy" column="create_by"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        </association>
     </resultMap>
 
     <select id="selectById" resultMap="userMap">
@@ -350,9 +353,9 @@
             u.head_img,
             u.create_time,
             r.id role_id,
-            r.role_name,
-            r.enabled,
-            r.create_by,
+            r.role_name role_role_name,
+            r.enabled role_enabled,
+            r.create_by role_create_by,
             r.create_time role_create_time
         from sys_user u
         inner join sys_user_role ur on u.id = ur.user_id
