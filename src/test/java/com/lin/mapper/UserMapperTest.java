@@ -134,7 +134,7 @@ public class UserMapperTest extends BaseMapperTest {
             SysUser user = new SysUser();
             user.setUserName("tests1");
             user.setUserPassword("123456");
-            user.setUserEmail("test1@163.com");
+//            user.setUserEmail("test1@163.com");
             user.setUserInfo("test info");
 
             // 正常情况下应该读入一张图片存到byte数组中

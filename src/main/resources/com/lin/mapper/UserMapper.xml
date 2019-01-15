@@ -92,12 +92,18 @@
     <insert id="insert2" useGeneratedKeys="true" keyProperty="id">
         insert into sys_user (
             user_name, user_password,
-            user_email, user_info,
+            <if test="userEmail != null and userEmail !=''">
+                user_email,
+            </if>
+            user_info,
             head_img, create_time
         )
         values (
            #{userName}, #{userPassword},
-           #{userEmail}, #{userInfo},
+           <if test="userEmail != null and userEmail !=''">
+                #{userEmail},
+           </if>
+          #{userInfo},
            #{headImg, jdbcType=BLOB},#{createTime, jdbcType=TIMESTAMP}
         )
     </insert>
