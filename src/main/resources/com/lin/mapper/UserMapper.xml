@@ -190,10 +190,10 @@
         </where>
     </select>
 
-    <!--set语句最后加上id = #{id}，防止所有条件为null时出错-->
+    <!--set标签可以自动把最后的多余逗号删除，最后加上id = #{id}，防止所有条件为null时出错-->
     <update id="updateByIdSelective">
         update sys_user
-        set
+        <set>
             <if test="userName != null and userName !=''">
                 user_name = #{userName},
             </if>
@@ -212,7 +212,8 @@
             <if test="createTime != null">
                 create_time = #{createTime, jdbcType=TIMESTAMP},
             </if>
-            id = #{id}
+            id = #{id},
+        </set>
         where id = #{id}
     </update>
 
