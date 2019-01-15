@@ -23,8 +23,9 @@
     </resultMap>
 
     <!--role变量中的其他值是根据主查询中的role_id作为RoleMapper.selectRoleById方法的参数来求出的-->
+    <!--fetchType为lazy表示懒加载，只有要获取user中role属性的值的时候才进行子查询-->
     <resultMap id="userRoleMapSelect" extends="userMap" type="com.lin.model.SysUser">
-        <association property="role" column="{id=role_id}"
+        <association property="role" column="{id=role_id}" fetchType="lazy"
                      select="com.lin.mapper.RoleMapper.selectRoleById"/>
     </resultMap>
 

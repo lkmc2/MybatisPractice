@@ -8,6 +8,8 @@
         <setting name="logImpl" value="LOG4J"/>
         <!--让数据库带下划线的字段自动转换成驼峰命名-->
         <!--<setting name="mapUnderscoreToCamelCase" value="true"/>-->
+        <!--启动懒加载-->
+        <setting name="aggressiveLazyLoading" value="false"/>
     </settings>
 
     <!--配置一个包的别名，这样返回值可以只写类名，不写包名-->

@@ -493,6 +493,7 @@ public class UserMapperTest extends BaseMapperTest {
             SysUser user = userMapper.selectUserAndRoleByIdSelect(1001L);
             // 用户非空
             assertNotNull(user);
+            System.out.println("调用user.getRole()");
             // 用户的role属性非空
             assertNotNull(user.getRole());
         }
