@@ -1,5 +1,6 @@
-package com.lin;
+package com.lin.mapper;
 
+import com.lin.BaseMapperTest;
 import com.lin.mapper.UserMapper;
 import com.lin.model.SysRole;
 import com.lin.model.SysRoleExtend;

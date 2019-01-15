@@ -1,5 +1,6 @@
-package com.lin;
+package com.lin.mapper;
 
+import com.lin.BaseMapperTest;
 import com.lin.model.Country;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
