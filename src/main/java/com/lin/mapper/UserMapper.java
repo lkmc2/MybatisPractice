@@ -81,4 +81,7 @@ public interface UserMapper {
 
     // 根据用户id获取用户信息和用户的角色信息
     SysUser selectUserAndRoleById(Long id);
+
+    // 根据用户id获取用户信息和用户的角色信息（方式2，使用resultMap作为返回值）
+    SysUser selectUserAndRoleById2(Long id);
 }

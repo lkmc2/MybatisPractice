@@ -15,6 +15,23 @@
         <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
     </resultMap>
 
+    <!--用户角色映射Map-->
+    <resultMap id="userRoleMap" type="com.lin.model.SysUser">
+        <id property="id" column="id"/>
+        <result property="userName" column="user_name"/>
+        <result property="userPassword" column="user_password"/>
+        <result property="userEmail" column="user_email"/>
+        <result property="userInfo" column="user_info"/>
+        <result property="headImg" column="head_img" jdbcType="BLOB"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <!--role相关属性-->
+        <result property="role.id" column="role_id"/>
+        <result property="role.roleName" column="role_name"/>
+        <result property="role.enabled" column="enabled"/>
+        <result property="role.createBy" column="create_by"/>
+        <result property="role.createTime" column="role_create_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
     <select id="selectById" resultMap="userMap">
         select * from sys_user where id = #{id}
     </select>
@@ -323,6 +340,27 @@
             r.enabled "role.enabled",
             r.create_by "role.createBy",
             r.create_time "role.createTime"
+        from sys_user u
+        inner join sys_user_role ur on u.id = ur.user_id
+        inner join sys_role r on ur.role_id = r.id
+        where u.id = #{id}
+    </select>
+
+    <!--使用resultMap作为返回值，可以不写别名，因为role的id和create_time和user重名，所以需要重新命名-->
+    <select id="selectUserAndRoleById2" resultMap="userRoleMap">
+        select
+            u.id,
+            u.user_name,
+            u.user_password,
+            u.user_email,
+            u.user_info,
+            u.head_img,
+            u.create_time,
+            r.id role_id,
+            r.role_name,
+            r.enabled,
+            r.create_by,
+            r.create_time role_create_time
         from sys_user u
         inner join sys_user_role ur on u.id = ur.user_id
         inner join sys_role r on ur.role_id = r.id
