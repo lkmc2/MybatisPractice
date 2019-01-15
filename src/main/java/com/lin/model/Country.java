@@ -10,6 +10,9 @@ public class Country {
     private String countryname;
     private String countrycode;
 
+    public Country() {
+    }
+
     public Country(Integer id, String countryname, String countrycode) {
         this.id = id;
         this.countryname = countryname;

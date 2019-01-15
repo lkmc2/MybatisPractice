@@ -8,6 +8,8 @@ import org.junit.Test;
 
 import java.util.List;
 
+import static org.junit.Assert.assertEquals;
+
 /**
  * @author lkmc2
  * @date 2019/1/14
@@ -58,6 +60,50 @@ public class CountryMapperTest extends BaseMapperTest {
             // 执行查询
             List<Country> countryList = countryMapper.selectByExample(example);
             printCountryList(countryList);
+        }
+    }
+
+    @Test
+    public void testUpdateByExampleSelective() {
+        try(SqlSession sqlSession = getSqlSession()) {
+            // 获取CountryMapper接口
+            CountryMapper countryMapper = sqlSession.getMapper(CountryMapper.class);
+
+            // 创建Example对象
+            CountryExample example = new CountryExample();
+            // 创建条件
+            CountryExample.Criteria criteria = example.createCriteria();
+            // 更新所有id > 2的国家
+            criteria.andIdGreaterThan(2);
+
+            // 创建一个要设置的对象
+            Country country = new Country();
+            // 设置名字为China
+            country.setCountryname("China");
+
+            // 选择性更新数据
+            countryMapper.updateByExampleSelective(country, example);
+            printCountryList(countryMapper.selectByExample(example));
+        }
+    }
+
+    @Test
+    public void testDeleteByExample() {
+        try(SqlSession sqlSession = getSqlSession()) {
+            // 获取CountryMapper接口
+            CountryMapper countryMapper = sqlSession.getMapper(CountryMapper.class);
+
+            // 创建Example对象
+            CountryExample example = new CountryExample();
+            // 创建条件
+            CountryExample.Criteria criteria = example.createCriteria();
+            // 删除所有id > 2的国家
+            criteria.andIdGreaterThan(2);
+
+            // 根据条件进行删除
+            countryMapper.deleteByExample(example);
+            // 因为删除成功，所以数量为0
+            assertEquals(0, countryMapper.countByExample(example));
         }
     }
 

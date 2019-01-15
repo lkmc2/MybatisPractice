@@ -2,6 +2,7 @@ package com.lin.mapper;
 
 import com.lin.example.CountryExample;
 import com.lin.model.Country;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -16,4 +17,13 @@ public interface CountryMapper {
 
     // 根据Example条件进行查询
     List<Country> selectByExample(CountryExample example);
+
+    // 根据Example选择性更新国家信息
+    int updateByExampleSelective(@Param("record") Country record, @Param("example")CountryExample example);
+
+    // 根据Example进行删除
+    int deleteByExample(CountryExample example);
+
+    // 根据Example进行统计
+    int countByExample(CountryExample example);
 }
