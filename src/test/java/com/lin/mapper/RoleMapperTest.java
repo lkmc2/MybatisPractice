@@ -74,7 +74,7 @@ public class RoleMapperTest extends BaseMapperTest {
             role.setCreateBy(1);
             role.setCreateTime(new Date());
 
-            // 选择所有角色
+            // 插入角色
             int effectCount = roleMapper.insert(role);
             // 受影响行数必须为1
             assertEquals(1, effectCount);
@@ -103,7 +103,7 @@ public class RoleMapperTest extends BaseMapperTest {
             role.setCreateBy(1);
             role.setCreateTime(new Date());
 
-            // 选择所有角色
+            // 插入角色
             int effectCount = roleMapper.insert2(role);
             // 受影响行数必须为1
             assertEquals(1, effectCount);
@@ -132,7 +132,7 @@ public class RoleMapperTest extends BaseMapperTest {
             role.setCreateBy(1);
             role.setCreateTime(new Date());
 
-            // 选择所有角色
+            // 插入角色
             int effectCount = roleMapper.insert3(role);
             // 受影响行数必须为1
             assertEquals(1, effectCount);
@@ -147,7 +147,7 @@ public class RoleMapperTest extends BaseMapperTest {
     }
 
     @Test
-    public void tesUpdate() {
+    public void tesUpdateById() {
         SqlSession sqlSession = getSqlSession();
         try {
             // 获取RoleMapper
@@ -161,12 +161,36 @@ public class RoleMapperTest extends BaseMapperTest {
             role.setCreateBy(1);
             role.setCreateTime(new Date());
 
-            // 选择所有角色
+            // 更新id为1的角色信息
             int effectCount = roleMapper.updateById(role);
             // 受影响行数必须为1
             assertEquals(1, effectCount);
             // 角色id会回写到role上，id非空
             assertNotNull(role.getId());
+        } finally {
+            // 为了不影响其他测试，此处选择回滚
+            // 默认openSession()是不自动提交的，不回滚也不会提交到数据库
+            sqlSession.rollback();
+            sqlSession.close();
+        }
+    }
+
+    @Test
+    public void tesDeleteById() {
+        SqlSession sqlSession = getSqlSession();
+        try {
+            // 获取RoleMapper
+            RoleMapper roleMapper = sqlSession.getMapper(RoleMapper.class);
+
+            // 删除id为1的用户
+            int effectCount = roleMapper.deleteById(1L);
+            // 受影响行数必须为1
+            assertEquals(1, effectCount);
+
+            // 获取id为1的角色，此时已被删除
+            SysRole role = roleMapper.selectById(1L);
+            // 角色为空
+            assertNull(role);
         } finally {
             // 为了不影响其他测试，此处选择回滚
             // 默认openSession()是不自动提交的，不回滚也不会提交到数据库

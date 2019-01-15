@@ -54,8 +54,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/lin/mapper/RoleMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="549">
-              <caret line="75" column="33" lean-forward="true" selection-start-line="75" selection-start-column="33" selection-end-line="75" selection-end-column="33" />
+            <state relative-caret-position="275">
+              <caret line="78" column="15" selection-start-line="78" selection-start-column="15" selection-end-line="78" selection-end-column="15" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -66,8 +66,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/lin/mapper/RoleMapperTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="166" column="41" lean-forward="true" selection-start-line="166" selection-start-column="41" selection-end-line="166" selection-end-column="41" />
+            <state relative-caret-position="294">
+              <caret line="191" column="19" selection-start-line="191" selection-start-column="19" selection-end-line="191" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -321,7 +321,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547523295895" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547523534542" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="database.console.LAST_STATE" value="true" />
@@ -366,7 +366,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.RoleMapperTest.tesUpdate">
+  <component name="RunManager" selected="JUnit.RoleMapperTest.tesDeleteById">
+    <configuration name="RoleMapperTest.tesDeleteById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MybatisPractice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lin.mapper.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.lin.mapper" />
+      <option name="MAIN_CLASS_NAME" value="com.lin.mapper.RoleMapperTest" />
+      <option name="METHOD_NAME" value="tesDeleteById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RoleMapperTest.tesInsert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MybatisPractice" />
       <extension name="coverage">
@@ -431,29 +447,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RoleMapperTest.testSelectById2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MybatisPractice" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.lin.mapper.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.lin.mapper" />
-      <option name="MAIN_CLASS_NAME" value="com.lin.mapper.RoleMapperTest" />
-      <option name="METHOD_NAME" value="testSelectById2" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RoleMapperTest.tesDeleteById" />
         <item itemvalue="JUnit.RoleMapperTest.tesUpdate" />
         <item itemvalue="JUnit.RoleMapperTest.tesInsert3" />
         <item itemvalue="JUnit.RoleMapperTest.tesInsert2" />
         <item itemvalue="JUnit.RoleMapperTest.tesInsert" />
-        <item itemvalue="JUnit.RoleMapperTest.testSelectById2" />
       </list>
     </recent_temporary>
   </component>
@@ -468,7 +468,7 @@
       <option name="presentableId" value="Default" />
       <updated>1547452865585</updated>
       <workItem from="1547452870347" duration="19651000" />
-      <workItem from="1547517434089" duration="4983000" />
+      <workItem from="1547517434089" duration="5254000" />
     </task>
     <task id="LOCAL-00001" summary="添加Mybatis配置文件">
       <created>1547454834050</created>
@@ -575,16 +575,17 @@
       <option name="project" value="LOCAL" />
       <updated>1547521758790</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="添加使用@Update注解的例子">
+      <created>1547523345541</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1547523345541</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RoleMapperTest_testSelectAll - 2019.01.15 at 10h 46m 07s.xml">
-      <configuration name="RoleMapperTest.testSelectAll" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RoleMapperTest_testSelectById - 2019.01.15 at 10h 47m 32s.xml">
-      <configuration name="RoleMapperTest.testSelectById" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="RoleMapperTest_testSelectById2 - 2019.01.15 at 10h 47m 48s.xml">
       <configuration name="RoleMapperTest.testSelectById2" configurationId="JUnit" />
     </history-entry>
@@ -609,9 +610,15 @@
     <history-entry file="RoleMapperTest_tesInsert3 - 2019.01.15 at 11h 08m 17s.xml">
       <configuration name="RoleMapperTest.tesInsert3" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="RoleMapperTest_tesUpdate - 2019.01.15 at 11h 34m 28s.xml">
+      <configuration name="RoleMapperTest.tesUpdate" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RoleMapperTest_tesUpdate - 2019.01.15 at 11h 35m 00s.xml">
+      <configuration name="RoleMapperTest.tesUpdate" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22890000" />
+    <option name="totallyTimeSpent" value="23161000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -637,7 +644,7 @@
       <window_info id="Image Layers" order="8" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32988358" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32988358" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32988358" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39974126" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -711,7 +718,8 @@
     <MESSAGE value="添加使用@Results注解来表示resultMap的例子" />
     <MESSAGE value="使用@ResultMap注解，复用@Results注解声明的resultMap" />
     <MESSAGE value="添加@Insert、@Options、@SelectKey注解的使用例子" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加@Insert、@Options、@SelectKey注解的使用例子" />
+    <MESSAGE value="添加使用@Update注解的例子" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加使用@Update注解的例子" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -1051,8 +1059,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lin/mapper/RoleMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="75" column="33" lean-forward="true" selection-start-line="75" selection-start-column="33" selection-end-line="75" selection-end-column="33" />
+        <state relative-caret-position="275">
+          <caret line="78" column="15" selection-start-line="78" selection-start-column="15" selection-end-line="78" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1061,8 +1069,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/lin/mapper/RoleMapperTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="166" column="41" lean-forward="true" selection-start-line="166" selection-start-column="41" selection-end-line="166" selection-end-column="41" />
+        <state relative-caret-position="294">
+          <caret line="191" column="19" selection-start-line="191" selection-start-column="19" selection-end-line="191" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -75,4 +75,8 @@ public interface RoleMapper {
                 "create_time = #{createTime, jdbcType=TIMESTAMP}",
             "where id = #{id}" })
     int updateById(SysRole sysRole);
+
+    // 根据id删除角色
+    @Delete("delete from sys_role where id = #{id}")
+    int deleteById(Long id);
 }
