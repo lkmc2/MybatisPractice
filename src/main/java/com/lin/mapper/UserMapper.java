@@ -68,4 +68,7 @@ public interface UserMapper {
 
     // 根据用户id或用户名查询
     SysUser selectByIdOrUserName(SysUser sysUser);
+
+    // 根据用户id集合查询
+    List<SysUser> selectByIdList(List<Long> idList);
 }

@@ -7,6 +7,7 @@ import com.lin.model.SysUser;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -370,6 +371,24 @@ public class UserMapperTest extends BaseMapperTest {
             query.setUserName(null);
             user = userMapper.selectByIdOrUserName(query);
             assertNull(user);
+        }
+    }
+
+    @Test
+    public void testSelectByIdList() {
+        try(SqlSession sqlSession = getSqlSession()) {
+            // 获取UserMapper接口
+            UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+
+            // 创建id列表
+            List<Long> idList = new ArrayList<>();
+            idList.add(1L);
+            idList.add(1001L);
+
+            // 根据id列表获取用户列表
+            List<SysUser> userList = userMapper.selectByIdList(idList);
+            // 用户列表必须有两个人
+            assertEquals(2, userList.size());
         }
     }
 

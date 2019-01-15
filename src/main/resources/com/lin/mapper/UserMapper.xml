@@ -242,4 +242,21 @@
         </choose>
     </select>
 
+    <!--这里的collections填的不是接口的参数名，List的话填list，数组的话填array-->
+    <!--会自动把参数的值放到foreach中，不需要写方法的参数名-->
+    <select id="selectByIdList" resultType="com.lin.model.SysUser">
+        select id,
+            user_name userName,
+            user_password userPassword,
+            user_email userEmail,
+            user_info userInfo,
+            head_img headImg,
+            create_time createTime
+        from sys_user
+        where id in
+        <foreach collection="list" open="(" close=")" separator="," item="id" index="i">
+            #{id}
+        </foreach>
+    </select>
+
 </mapper>
