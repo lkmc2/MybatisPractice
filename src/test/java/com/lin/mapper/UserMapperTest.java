@@ -1,16 +1,16 @@
 package com.lin.mapper;
 
 import com.lin.BaseMapperTest;
-import com.lin.mapper.UserMapper;
 import com.lin.model.SysRole;
 import com.lin.model.SysRoleExtend;
 import com.lin.model.SysUser;
 import org.apache.ibatis.session.SqlSession;
-import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.Date;
 import java.util.List;
+
+import static org.junit.Assert.*;
 
 /**
  * @author lkmc2
@@ -27,9 +27,9 @@ public class UserMapperTest extends BaseMapperTest {
             // 查询id为1的用户
             SysUser user = userMapper.selectById(1L);
             // 用户必须非空
-            Assert.assertNotNull(user);
+            assertNotNull(user);
             // 用户名必须等于admin
-            Assert.assertEquals("admin", user.getUserName());
+            assertEquals("admin", user.getUserName());
         }
     }
 
@@ -41,9 +41,9 @@ public class UserMapperTest extends BaseMapperTest {
             // 查询所有用户
             List<SysUser> userList = userMapper.selectAll();
             // 用户列表必须非空
-            Assert.assertNotNull(userList);
+            assertNotNull(userList);
             // 用户数量大于0
-            Assert.assertTrue(userList.size() > 0);
+            assertTrue(userList.size() > 0);
         }
     }
 
@@ -55,9 +55,9 @@ public class UserMapperTest extends BaseMapperTest {
             // 根据用户id获取角色信息
             List<SysRole> userList = userMapper.selectRolesByUserId(1L);
             // 用户列表必须非空
-            Assert.assertNotNull(userList);
+            assertNotNull(userList);
             // 用户数量大于0
-            Assert.assertTrue(userList.size() > 0);
+            assertTrue(userList.size() > 0);
         }
     }
 
@@ -69,9 +69,9 @@ public class UserMapperTest extends BaseMapperTest {
             // 根据用户id获取角色信息，并带有当前用户名
             List<SysRoleExtend> userList = userMapper.selectRolesAndUserNameByUserId(1L);
             // 用户列表必须非空
-            Assert.assertNotNull(userList);
+            assertNotNull(userList);
             // 用户数量大于0
-            Assert.assertTrue(userList.size() > 0);
+            assertTrue(userList.size() > 0);
         }
     }
 
@@ -83,9 +83,9 @@ public class UserMapperTest extends BaseMapperTest {
             // 根据用户id获取角色信息，并带有当前用户名
             List<SysRole> userList = userMapper.selectRolesAndUserNameByUserId2(1L);
             // 用户列表必须非空
-            Assert.assertNotNull(userList);
+            assertNotNull(userList);
             // 用户数量大于0
-            Assert.assertTrue(userList.size() > 0);
+            assertTrue(userList.size() > 0);
         }
     }
 
@@ -111,9 +111,9 @@ public class UserMapperTest extends BaseMapperTest {
             // 插入用户，获取受影响行数
             int effectCount = userMapper.insert(user);
             // 受影响行数必须为1
-            Assert.assertEquals(1, effectCount);
+            assertEquals(1, effectCount);
             // 用户id未赋值，为空
-            Assert.assertNull(user.getId());
+            assertNull(user.getId());
         } finally {
             // 为了不影响其他测试，此处选择回滚
             // 默认openSession()是不自动提交的，不回滚也不会提交到数据库
@@ -144,9 +144,9 @@ public class UserMapperTest extends BaseMapperTest {
             // 插入用户，获取受影响行数
             int effectCount = userMapper.insert2(user);
             // 受影响行数必须为1
-            Assert.assertEquals(1, effectCount);
+            assertEquals(1, effectCount);
             // 因为用户id从数据库获取id后回写，此值不为空
-            Assert.assertNotNull(user.getId());
+            assertNotNull(user.getId());
         } finally {
             // 为了不影响其他测试，此处选择回滚
             // 默认openSession()是不自动提交的，不回滚也不会提交到数据库
@@ -177,9 +177,9 @@ public class UserMapperTest extends BaseMapperTest {
             // 插入用户，获取受影响行数
             int effectCount = userMapper.insert3(user);
             // 受影响行数必须为1
-            Assert.assertEquals(1, effectCount);
+            assertEquals(1, effectCount);
             // 因为用户id从数据库获取id后回写，此值不为空
-            Assert.assertNotNull(user.getId());
+            assertNotNull(user.getId());
         } finally {
             // 为了不影响其他测试，此处选择回滚
             // 默认openSession()是不自动提交的，不回滚也不会提交到数据库
@@ -199,7 +199,7 @@ public class UserMapperTest extends BaseMapperTest {
             // 从数据库查询一个用户
             SysUser user = userMapper.selectById(1L);
             // 当前用户名为admin
-            Assert.assertEquals("admin", user.getUserName());
+            assertEquals("admin", user.getUserName());
 
             user.setUserName("admin_test");
             user.setUserEmail("test@163.com");
@@ -207,12 +207,12 @@ public class UserMapperTest extends BaseMapperTest {
             // 更新数据，获取受影响行数
             int effectCount = userMapper.updateById(user);
             // 受响应行数必须是1
-            Assert.assertEquals(1, effectCount);
+            assertEquals(1, effectCount);
 
             // 根据当前id查询修改后的数据
             user = userMapper.selectById(1L);
             // 修改后的名字是admin_test
-            Assert.assertEquals("admin_test", user.getUserName());
+            assertEquals("admin_test", user.getUserName());
         } finally {
             // 为了不影响其他测试，此处选择回滚
             // 默认openSession()是不自动提交的，不回滚也不会提交到数据库
@@ -232,22 +232,22 @@ public class UserMapperTest extends BaseMapperTest {
             // 从数据库查询一个用户
             SysUser user1 = userMapper.selectById(1L);
             // 此时用户非空
-            Assert.assertNotNull(user1);
+            assertNotNull(user1);
 
             // 调用方法删除
-            Assert.assertEquals(1, userMapper.deleteById(1L));
+            assertEquals(1, userMapper.deleteById(1L));
             // 再次查询，此时应该为null
-            Assert.assertNull(userMapper.selectById(1L));
+            assertNull(userMapper.selectById(1L));
 
             // 从数据库查询一个用户
             SysUser user2 = userMapper.selectById(1001L);
             // 此时用户非空
-            Assert.assertNotNull(user2);
+            assertNotNull(user2);
 
             // 调用方法删除
-            Assert.assertEquals(1, userMapper.deleteById(user2));
+            assertEquals(1, userMapper.deleteById(user2));
             // 再次查询，此时应该为null
-            Assert.assertNull(userMapper.selectById(1L));
+            assertNull(userMapper.selectById(1L));
         } finally {
             // 为了不影响其他测试，此处选择回滚
             // 默认openSession()是不自动提交的，不回滚也不会提交到数据库
@@ -264,9 +264,9 @@ public class UserMapperTest extends BaseMapperTest {
             // 根据用户id和角色的enabled状态获取用户的角色
             List<SysRole> userList = userMapper.selectRolesByUserIdAndRoleEnabled(1L, 1);
             // 用户列表必须非空
-            Assert.assertNotNull(userList);
+            assertNotNull(userList);
             // 用户数量大于0
-            Assert.assertTrue(userList.size() > 0);
+            assertTrue(userList.size() > 0);
         }
     }
 
@@ -286,10 +286,40 @@ public class UserMapperTest extends BaseMapperTest {
             // 根据用户id和角色的enabled状态获取用户的角色
             List<SysRole> userList = userMapper.selectRolesByUserAndRole(user, role);
             // 用户列表必须非空
-            Assert.assertNotNull(userList);
+            assertNotNull(userList);
             // 用户数量大于0
-            Assert.assertTrue(userList.size() > 0);
+            assertTrue(userList.size() > 0);
         }
     }
 
+    @Test
+    public void testSelectByUser() {
+        try(SqlSession sqlSession = getSqlSession()) {
+            // 获取UserMapper接口
+            UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+
+            // 1.只查询用户名时
+            SysUser query = new SysUser();
+            query.setUserName("ad");
+            List<SysUser> userList = userMapper.selectByUser(query);
+            assertTrue(userList.size() > 0);
+
+            // 2.只查询用户邮箱时
+            query = new SysUser();
+            query.setUserEmail("test@mybatis.tk");
+            userList = userMapper.selectByUser(query);
+            assertTrue(userList.size() > 0);
+
+
+            // 3.同时查询用户名和邮箱时
+            query = new SysUser();
+            query.setUserName("ad");
+            query.setUserEmail("test@mybatis.tk");
+            userList = userMapper.selectByUser(query);
+
+            // 由于没有同时符合这两个条件的用户，因此查询结果为0
+            assertEquals(0, userList.size());
+        }
+    }
+    
 }

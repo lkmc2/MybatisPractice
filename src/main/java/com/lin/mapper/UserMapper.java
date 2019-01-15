@@ -56,4 +56,10 @@ public interface UserMapper {
     List<SysRole> selectRolesByUserAndRole(
             @Param("user") SysUser user,
             @Param("role") SysRole role);
+
+    // 根据条件进行查询用户：
+    // 1.当只输入用户名时，需要根据用户名进行模糊查询
+    // 2.当只输入邮箱时，根据邮箱进行完全匹配
+    // 3.当同时输入用户名和邮箱时，用这两个条件去查询匹配的用户
+    List<SysUser> selectByUser(SysUser sysUser);
 }

@@ -162,4 +162,19 @@
         where u.id = #{user.id} and r.enabled = #{role.enabled}
     </select>
 
+    <!--此时不满足要求，因为只有用户名和邮箱都存在的时候才能使用-->
+    <select id="selectByUser" resultType="com.lin.model.SysUser">
+        select
+           id,
+           user_name userName,
+           user_password userPassword,
+           user_email userEmail,
+           user_info userInfo,
+           head_img headImg,
+           create_time createTime
+        from sys_user
+        where user_name like concat('%', #{userName}, '%')
+              and user_email = #{userEmail}
+    </select>
+
 </mapper>
