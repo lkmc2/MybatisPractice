@@ -48,6 +48,13 @@
             <artifactId>log4j</artifactId>
             <version>1.2.17</version>
         </dependency>
+
+        <!--Mybatis生成器-->
+        <dependency>
+            <groupId>org.mybatis.generator</groupId>
+            <artifactId>mybatis-generator-core</artifactId>
+            <version>1.3.3</version>
+        </dependency>
     </dependencies>
 
     <build>

@@ -185,12 +185,15 @@
         from sys_user
         <where>
             <if test="userName != null and userName != ''">
-                <if test="_databaseId == 'mysql'">
-                    and user_name like concat('%', #{userName}, '%')
-                </if>
-                <if test="_databaseId == 'oracle'">
-                    and user_name like '%'||#{userName}||'%'
-                </if>
+                <!--此处的根据_databaseId识别mysql数据库失败，不知为何-->
+                <!--<if test="_databaseId == 'mysql'">-->
+                    <!--and user_name like concat('%', #{userName}, '%')-->
+                <!--</if>-->
+                <!--<if test="_databaseId == 'oracle'">-->
+                    <!--and user_name like '%'||#{userName}||'%'-->
+                <!--</if>-->
+                <bind name="userNameLike" value="'%' + userName + '%'" />
+                and user_name like #{userNameLike}
             </if>
             <if test="userEmail != null and userEmail != ''">
                 and user_email = #{userEmail}
