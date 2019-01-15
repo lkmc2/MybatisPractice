@@ -170,6 +170,8 @@
 
     <!--property != null所有属性都可以使用，property != ''只有字符串可以使用，条件间的连接符使用and或or-->
     <!--where标签可以替代where 1 = 1语句的作用-->
+    <!--使用bind标签声明语句变量，可用该变量替换and user_name like concat('%', #{userName}, '%')-->
+    <!--使用bind标签可以解决不同数据库函数参数不一致的情况-->
     <select id="selectByUser" resultType="com.lin.model.SysUser">
         select
            id,
@@ -182,7 +184,8 @@
         from sys_user
         <where>
             <if test="userName != null and userName != ''">
-                and user_name like concat('%', #{userName}, '%')
+                <bind name="userNameLike" value="'%' + userName + '%'" />
+                and user_name like #{userNameLike}
             </if>
             <if test="userEmail != null and userEmail != ''">
                 and user_email = #{userEmail}

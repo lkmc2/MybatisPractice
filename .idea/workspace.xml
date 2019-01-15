@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c8f0665e-147f-4556-982f-86ef8922dd92" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lin/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lin/mapper/UserMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/lin/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lin/mapper/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/lin/mapper/UserMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/lin/mapper/UserMapperTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -55,8 +53,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/lin/mapper/UserMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="568">
-              <caret line="79" column="19" selection-start-line="79" selection-start-column="8" selection-end-line="79" selection-end-column="19" />
+            <state relative-caret-position="294">
+              <caret line="78" column="15" lean-forward="true" selection-start-line="78" selection-start-column="15" selection-end-line="78" selection-end-column="15" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -67,8 +65,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/com/lin/mapper/UserMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="549">
-              <caret line="282" column="24" lean-forward="true" selection-start-line="282" selection-start-column="24" selection-end-line="282" selection-end-column="24" />
+            <state relative-caret-position="296">
+              <caret line="183" column="15" lean-forward="true" selection-start-line="183" selection-start-column="15" selection-end-line="183" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -76,8 +74,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/lin/mapper/UserMapperTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="441" column="25" selection-start-line="441" selection-start-column="25" selection-end-line="441" selection-end-column="25" />
+            <state relative-caret-position="69">
+              <caret line="294" column="16" selection-start-line="294" selection-start-column="16" selection-end-line="294" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -100,6 +98,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>Assert.assert</find>
+      <find>like</find>
     </findStrings>
     <replaceStrings>
       <replace>assert</replace>
@@ -147,8 +146,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/lin/provider/PrivilegeProvider.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/075c43fa-9b7f-4d89-96e6-68de9372c3f3/console.sql" />
         <option value="$PROJECT_DIR$/src/main/java/com/lin/mapper/UserMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/lin/mapper/UserMapper.xml" />
         <option value="$PROJECT_DIR$/src/test/java/com/lin/mapper/UserMapperTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/lin/mapper/UserMapper.xml" />
       </list>
     </option>
   </component>
@@ -335,7 +334,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547541025698" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547541359012" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="database.console.LAST_STATE" value="false" />
@@ -380,7 +379,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UserMapperTest.testUpdateByMap">
+  <component name="RunManager" selected="JUnit.UserMapperTest.testSelectByUser">
     <configuration name="UserMapperTest.testInsertList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MybatisPractice" />
       <extension name="coverage">
@@ -463,11 +462,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserMapperTest.testSelectByUser" />
         <item itemvalue="JUnit.UserMapperTest.testUpdateByMap" />
         <item itemvalue="JUnit.UserMapperTest.testInsertList" />
         <item itemvalue="JUnit.UserMapperTest.testSelectByIdList" />
         <item itemvalue="JUnit.UserMapperTest.testUpdateByIdSelective" />
-        <item itemvalue="JUnit.UserMapperTest.testSelectByUser" />
       </list>
     </recent_temporary>
   </component>
@@ -482,7 +481,7 @@
       <option name="presentableId" value="Default" />
       <updated>1547452865585</updated>
       <workItem from="1547452870347" duration="19651000" />
-      <workItem from="1547517434089" duration="13919000" />
+      <workItem from="1547517434089" duration="14252000" />
     </task>
     <task id="LOCAL-00001" summary="添加Mybatis配置文件">
       <created>1547454834050</created>
@@ -673,13 +672,17 @@
       <option name="project" value="LOCAL" />
       <updated>1547540354044</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="添加使用foreach标签进行更新的例子">
+      <created>1547541114922</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1547541114922</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UserMapperTest_testSelectByUser - 2019.01.15 at 12h 19m 37s.xml">
-      <configuration name="UserMapperTest.testSelectByUser" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="UserMapperTest_testUpdateByIdSelective - 2019.01.15 at 12h 33m 19s.xml">
       <configuration name="UserMapperTest.testUpdateByIdSelective" configurationId="JUnit" />
     </history-entry>
@@ -707,9 +710,12 @@
     <history-entry file="UserMapperTest_testInsertList - 2019.01.15 at 16h 18m 33s.xml">
       <configuration name="UserMapperTest.testInsertList" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="UserMapperTest_testUpdateByMap - 2019.01.15 at 16h 30m 33s.xml">
+      <configuration name="UserMapperTest.testUpdateByMap" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31826000" />
+    <option name="totallyTimeSpent" value="32159000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -794,7 +800,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="添加用户数据库接口，并进行测试" />
     <MESSAGE value="添加根据用户id获取角色信息，并带有当前用户名的例子" />
     <MESSAGE value="添加根据用户id获取角色信息，并带有当前用户名的例子（方式2）" />
     <MESSAGE value="添加使用insert插入的例子" />
@@ -819,7 +824,8 @@
     <MESSAGE value="添加set标签的例子" />
     <MESSAGE value="添加foreach标签的例子" />
     <MESSAGE value="添加使用foreach标签批量插入的例子" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加使用foreach标签批量插入的例子" />
+    <MESSAGE value="添加使用foreach标签进行更新的例子" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加使用foreach标签进行更新的例子" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -1190,8 +1196,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lin/mapper/UserMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="568">
-          <caret line="79" column="19" selection-start-line="79" selection-start-column="8" selection-end-line="79" selection-end-column="19" />
+        <state relative-caret-position="294">
+          <caret line="78" column="15" lean-forward="true" selection-start-line="78" selection-start-column="15" selection-end-line="78" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1200,15 +1206,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/com/lin/mapper/UserMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="282" column="24" lean-forward="true" selection-start-line="282" selection-start-column="24" selection-end-line="282" selection-end-column="24" />
+        <state relative-caret-position="296">
+          <caret line="183" column="15" lean-forward="true" selection-start-line="183" selection-start-column="15" selection-end-line="183" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/lin/mapper/UserMapperTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="441" column="25" selection-start-line="441" selection-start-column="25" selection-end-line="441" selection-end-column="25" />
+        <state relative-caret-position="69">
+          <caret line="294" column="16" selection-start-line="294" selection-start-column="16" selection-end-line="294" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
