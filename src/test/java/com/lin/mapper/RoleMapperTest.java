@@ -27,4 +27,17 @@ public class RoleMapperTest extends BaseMapperTest {
         }
     }
 
+    @Test
+    public void testSelectById2() {
+        try(SqlSession sqlSession = getSqlSession()) {
+            // 获取RoleMapper
+            RoleMapper roleMapper = sqlSession.getMapper(RoleMapper.class);
+            // 选择id为1的角色
+            SysRole role = roleMapper.selectById2(1L);
+            // 角色必须非空
+            assertNotNull(role);
+            assertNotNull(role.getId());
+        }
+    }
+
 }
