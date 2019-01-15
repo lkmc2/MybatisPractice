@@ -79,4 +79,7 @@ public interface RoleMapper {
     // 根据id删除角色
     @Delete("delete from sys_role where id = #{id}")
     int deleteById(Long id);
+
+    // 根据id选出角色
+    SysRole selectRoleById(Long id);
 }
