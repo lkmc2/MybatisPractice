@@ -6,15 +6,21 @@ package com.lin.model;
  * @description 国家
  */
 public class Country {
-    private Long id;
+    private Integer id;
     private String countryname;
     private String countrycode;
 
-    public Long getId() {
+    public Country(Integer id, String countryname, String countrycode) {
+        this.id = id;
+        this.countryname = countryname;
+        this.countrycode = countrycode;
+    }
+
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
