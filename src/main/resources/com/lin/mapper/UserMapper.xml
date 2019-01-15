@@ -259,4 +259,18 @@
         </foreach>
     </select>
 
+    <!--配置useGeneratedKeys为true，会把数据库的主键的值设置到keyProperty指定的id属性上-->
+    <insert id="insertList" useGeneratedKeys="true" keyProperty="id">
+        insert into sys_user(
+             user_name, user_password, user_email, user_info, head_img, create_time)
+        values
+        <foreach collection="list" item="user" separator=",">
+            (
+              #{user.userName}, #{user.userPassword}, #{user.userEmail},
+              #{user.userInfo}, #{user.headImg, jdbcType=BLOB},
+              #{user.createTime, jdbcType=TIMESTAMP}
+            )
+        </foreach>
+    </insert>
+
 </mapper>

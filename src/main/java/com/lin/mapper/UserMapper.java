@@ -71,4 +71,7 @@ public interface UserMapper {
 
     // 根据用户id集合查询
     List<SysUser> selectByIdList(List<Long> idList);
+
+    // 批量插入用户信息
+    int insertList(List<SysUser> userList);
 }

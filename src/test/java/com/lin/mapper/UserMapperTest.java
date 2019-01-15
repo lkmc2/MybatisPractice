@@ -392,4 +392,32 @@ public class UserMapperTest extends BaseMapperTest {
         }
     }
 
+    @Test
+    public void testInsertList() {
+        try(SqlSession sqlSession = getSqlSession()) {
+            // 获取UserMapper接口
+            UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+
+            // 创建多个用户，存到列表中
+            List<SysUser> userList = new ArrayList<>();
+            for (int i = 0; i < 5; i++) {
+                SysUser user = new SysUser();
+                user.setUserName("test" + i);
+                user.setUserPassword("123456");
+                user.setUserEmail("test@163.com");
+                userList.add(user);
+            }
+
+            // 批量插入用户，获取受影响行数
+            int effectCount = userMapper.insertList(userList);
+            // 受影响行数必须为5条
+            assertEquals(5, effectCount);
+
+            // 打印回写到user上的id值
+            for (SysUser user : userList) {
+                System.out.println(user.getId());
+            }
+        }
+    }
+
 }
