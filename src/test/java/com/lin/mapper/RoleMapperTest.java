@@ -146,4 +146,33 @@ public class RoleMapperTest extends BaseMapperTest {
         }
     }
 
+    @Test
+    public void tesUpdate() {
+        SqlSession sqlSession = getSqlSession();
+        try {
+            // 获取RoleMapper
+            RoleMapper roleMapper = sqlSession.getMapper(RoleMapper.class);
+
+            // 修改id为1的角色信息
+            SysRole role = new SysRole();
+            role.setId(1L);
+            role.setRoleName("数据库拥有者");
+            role.setEnabled(1);
+            role.setCreateBy(1);
+            role.setCreateTime(new Date());
+
+            // 选择所有角色
+            int effectCount = roleMapper.updateById(role);
+            // 受影响行数必须为1
+            assertEquals(1, effectCount);
+            // 角色id会回写到role上，id非空
+            assertNotNull(role.getId());
+        } finally {
+            // 为了不影响其他测试，此处选择回滚
+            // 默认openSession()是不自动提交的，不回滚也不会提交到数据库
+            sqlSession.rollback();
+            sqlSession.close();
+        }
+    }
+
 }

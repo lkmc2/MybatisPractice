@@ -54,8 +54,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/lin/mapper/RoleMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
-              <caret line="62" column="50" lean-forward="true" selection-start-line="62" selection-start-column="50" selection-end-line="62" selection-end-column="50" />
+            <state relative-caret-position="549">
+              <caret line="75" column="33" lean-forward="true" selection-start-line="75" selection-start-column="33" selection-end-line="75" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -66,20 +66,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/lin/mapper/RoleMapperTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="132" column="43" lean-forward="true" selection-start-line="132" selection-start-column="43" selection-end-line="132" selection-end-column="43" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/lin/mapper/UserMapperTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-442">
-              <caret line="254" column="31" lean-forward="true" selection-start-line="254" selection-start-column="31" selection-end-line="254" selection-end-column="31" />
+            <state relative-caret-position="397">
+              <caret line="166" column="41" lean-forward="true" selection-start-line="166" selection-start-column="41" selection-end-line="166" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -333,7 +321,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547521687331" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547523295895" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="database.console.LAST_STATE" value="true" />
@@ -378,7 +366,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.RoleMapperTest.tesInsert3">
+  <component name="RunManager" selected="JUnit.RoleMapperTest.tesUpdate">
     <configuration name="RoleMapperTest.tesInsert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MybatisPractice" />
       <extension name="coverage">
@@ -427,7 +415,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RoleMapperTest.testSelectById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RoleMapperTest.tesUpdate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MybatisPractice" />
       <extension name="coverage">
         <pattern>
@@ -437,7 +425,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.lin.mapper" />
       <option name="MAIN_CLASS_NAME" value="com.lin.mapper.RoleMapperTest" />
-      <option name="METHOD_NAME" value="testSelectById" />
+      <option name="METHOD_NAME" value="tesUpdate" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -461,11 +449,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RoleMapperTest.tesUpdate" />
         <item itemvalue="JUnit.RoleMapperTest.tesInsert3" />
         <item itemvalue="JUnit.RoleMapperTest.tesInsert2" />
         <item itemvalue="JUnit.RoleMapperTest.tesInsert" />
         <item itemvalue="JUnit.RoleMapperTest.testSelectById2" />
-        <item itemvalue="JUnit.RoleMapperTest.testSelectById" />
       </list>
     </recent_temporary>
   </component>
@@ -480,7 +468,7 @@
       <option name="presentableId" value="Default" />
       <updated>1547452865585</updated>
       <workItem from="1547452870347" duration="19651000" />
-      <workItem from="1547517434089" duration="4074000" />
+      <workItem from="1547517434089" duration="4983000" />
     </task>
     <task id="LOCAL-00001" summary="添加Mybatis配置文件">
       <created>1547454834050</created>
@@ -580,16 +568,17 @@
       <option name="project" value="LOCAL" />
       <updated>1547520414189</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="添加@Insert、@Options、@SelectKey注解的使用例子">
+      <created>1547521758789</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1547521758790</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RoleMapperTest_testSelectById - 2019.01.15 at 10h 30m 39s.xml">
-      <configuration name="RoleMapperTest.testSelectById" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RoleMapperTest_testSelectById2 - 2019.01.15 at 10h 40m 30s.xml">
-      <configuration name="RoleMapperTest.testSelectById2" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="RoleMapperTest_testSelectAll - 2019.01.15 at 10h 46m 07s.xml">
       <configuration name="RoleMapperTest.testSelectAll" configurationId="JUnit" />
     </history-entry>
@@ -614,9 +603,15 @@
     <history-entry file="RoleMapperTest_tesInsert2 - 2019.01.15 at 11h 04m 21s.xml">
       <configuration name="RoleMapperTest.tesInsert2" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="RoleMapperTest_tesInsert2 - 2019.01.15 at 11h 08m 01s.xml">
+      <configuration name="RoleMapperTest.tesInsert2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RoleMapperTest_tesInsert3 - 2019.01.15 at 11h 08m 17s.xml">
+      <configuration name="RoleMapperTest.tesInsert3" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21981000" />
+    <option name="totallyTimeSpent" value="22890000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -643,7 +638,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32988358" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32988358" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39974126" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39974126" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32988358" />
@@ -715,19 +710,8 @@
     <MESSAGE value="添加@Select注解的例子" />
     <MESSAGE value="添加使用@Results注解来表示resultMap的例子" />
     <MESSAGE value="使用@ResultMap注解，复用@Results注解声明的resultMap" />
-    <option name="LAST_COMMIT_MESSAGE" value="使用@ResultMap注解，复用@Results注解声明的resultMap" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/lin/mapper/RoleMapperTest.java</url>
-          <line>139</line>
-          <properties />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="添加@Insert、@Options、@SelectKey注解的使用例子" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加@Insert、@Options、@SelectKey注解的使用例子" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -1067,8 +1051,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lin/mapper/RoleMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="62" column="50" lean-forward="true" selection-start-line="62" selection-start-column="50" selection-end-line="62" selection-end-column="50" />
+        <state relative-caret-position="549">
+          <caret line="75" column="33" lean-forward="true" selection-start-line="75" selection-start-column="33" selection-end-line="75" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1077,8 +1061,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/lin/mapper/RoleMapperTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="132" column="43" lean-forward="true" selection-start-line="132" selection-start-column="43" selection-end-line="132" selection-end-column="43" />
+        <state relative-caret-position="397">
+          <caret line="166" column="41" lean-forward="true" selection-start-line="166" selection-start-column="41" selection-end-line="166" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

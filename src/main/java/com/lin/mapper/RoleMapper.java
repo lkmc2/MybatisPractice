@@ -66,4 +66,13 @@ public interface RoleMapper {
                resultType = Long.class,
                before = false) // before为false等效于xml中order为AFTER
     int insert3(SysRole sysRole);
+
+    // 根据id更新角色
+    @Update({"update sys_role",
+            "set role_name = #{roleName},",
+                "enabled = #{enabled},",
+                "create_by = #{createBy},",
+                "create_time = #{createTime, jdbcType=TIMESTAMP}",
+            "where id = #{id}" })
+    int updateById(SysRole sysRole);
 }
