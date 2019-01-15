@@ -5,6 +5,8 @@ import com.lin.model.SysRole;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 
+import java.util.List;
+
 import static org.junit.Assert.*;
 
 /**
@@ -37,6 +39,20 @@ public class RoleMapperTest extends BaseMapperTest {
             // 角色必须非空
             assertNotNull(role);
             assertNotNull(role.getId());
+        }
+    }
+
+    @Test
+    public void testSelectAll() {
+        try(SqlSession sqlSession = getSqlSession()) {
+            // 获取RoleMapper
+            RoleMapper roleMapper = sqlSession.getMapper(RoleMapper.class);
+            // 选择所有角色
+            List<SysRole> roleList = roleMapper.selectAll();
+            // 角色必须非空
+            assertNotNull(roleList);
+            // 角色列表必须大于0
+            assertTrue(roleList.size() > 0);
         }
     }
 
