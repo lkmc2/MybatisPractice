@@ -7,9 +7,7 @@ import com.lin.model.SysUser;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 import static org.junit.Assert.*;
 
@@ -417,6 +415,38 @@ public class UserMapperTest extends BaseMapperTest {
             for (SysUser user : userList) {
                 System.out.println(user.getId());
             }
+        }
+    }
+
+    @Test
+    public void testUpdateByMap() {
+        SqlSession sqlSession = getSqlSession();
+
+        try {
+            // 获取UserMapper接口
+            UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+
+            // map中将设置查询条件id为1，以及要更新的值
+            Map<String, Object> map = new HashMap<>();
+            // 查询条件
+            map.put("id", 1L);
+            // 要更新的字段
+            map.put("user_email", "test@163.com");
+            map.put("user_password", "88888888");
+
+            // 更新数据
+            userMapper.updateByMap(map);
+
+            // 根据id获取修改后的数据
+            SysUser user = userMapper.selectById(1L);
+            // 验证数据是否修改成功
+            assertEquals("test@163.com", user.getUserEmail());
+            assertEquals("88888888", user.getUserPassword());
+        } finally {
+            // 为了不影响其他测试，此处选择回滚
+            // 默认openSession()是不自动提交的，不回滚也不会提交到数据库
+            sqlSession.rollback();
+            sqlSession.close();
         }
     }
 

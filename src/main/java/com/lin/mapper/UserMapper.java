@@ -6,6 +6,7 @@ import com.lin.model.SysUser;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author lkmc2
@@ -74,4 +75,7 @@ public interface UserMapper {
 
     // 批量插入用户信息
     int insertList(List<SysUser> userList);
+
+    // 通过Map更新列
+    int updateByMap(Map<String, Object> map);
 }

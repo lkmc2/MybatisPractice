@@ -55,8 +55,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/lin/mapper/UserMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="75" column="18" selection-start-line="75" selection-start-column="8" selection-end-line="75" selection-end-column="18" />
+            <state relative-caret-position="568">
+              <caret line="79" column="19" selection-start-line="79" selection-start-column="8" selection-end-line="79" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -67,8 +67,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/com/lin/mapper/UserMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="261" column="26" selection-start-line="261" selection-start-column="16" selection-end-line="261" selection-end-column="26" />
+            <state relative-caret-position="549">
+              <caret line="282" column="24" lean-forward="true" selection-start-line="282" selection-start-column="24" selection-end-line="282" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -76,8 +76,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/lin/mapper/UserMapperTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="411" column="62" selection-start-line="411" selection-start-column="62" selection-end-line="411" selection-end-column="62" />
+            <state relative-caret-position="402">
+              <caret line="441" column="25" selection-start-line="441" selection-start-column="25" selection-end-line="441" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -335,7 +335,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547540306086" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547541025698" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="database.console.LAST_STATE" value="false" />
@@ -380,7 +380,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UserMapperTest.testInsertList">
+  <component name="RunManager" selected="JUnit.UserMapperTest.testUpdateByMap">
     <configuration name="UserMapperTest.testInsertList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MybatisPractice" />
       <extension name="coverage">
@@ -408,22 +408,6 @@
       <option name="PACKAGE_NAME" value="com.lin.mapper" />
       <option name="MAIN_CLASS_NAME" value="com.lin.mapper.UserMapperTest" />
       <option name="METHOD_NAME" value="testSelectByIdList" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserMapperTest.testSelectByIdOrUserName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MybatisPractice" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.lin.mapper.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.lin.mapper" />
-      <option name="MAIN_CLASS_NAME" value="com.lin.mapper.UserMapperTest" />
-      <option name="METHOD_NAME" value="testSelectByIdOrUserName" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -461,13 +445,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserMapperTest.testUpdateByMap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MybatisPractice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lin.mapper.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.lin.mapper" />
+      <option name="MAIN_CLASS_NAME" value="com.lin.mapper.UserMapperTest" />
+      <option name="METHOD_NAME" value="testUpdateByMap" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserMapperTest.testUpdateByMap" />
         <item itemvalue="JUnit.UserMapperTest.testInsertList" />
         <item itemvalue="JUnit.UserMapperTest.testSelectByIdList" />
         <item itemvalue="JUnit.UserMapperTest.testUpdateByIdSelective" />
         <item itemvalue="JUnit.UserMapperTest.testSelectByUser" />
-        <item itemvalue="JUnit.UserMapperTest.testSelectByIdOrUserName" />
       </list>
     </recent_temporary>
   </component>
@@ -482,7 +482,7 @@
       <option name="presentableId" value="Default" />
       <updated>1547452865585</updated>
       <workItem from="1547452870347" duration="19651000" />
-      <workItem from="1547517434089" duration="13043000" />
+      <workItem from="1547517434089" duration="13919000" />
     </task>
     <task id="LOCAL-00001" summary="添加Mybatis配置文件">
       <created>1547454834050</created>
@@ -666,16 +666,17 @@
       <option name="project" value="LOCAL" />
       <updated>1547539661102</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="添加使用foreach标签批量插入的例子">
+      <created>1547540354043</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1547540354044</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UserMapperTest_testSelectByUser - 2019.01.15 at 12h 13m 47s.xml">
-      <configuration name="UserMapperTest.testSelectByUser" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserMapperTest_testSelectByUser - 2019.01.15 at 12h 18m 43s.xml">
-      <configuration name="UserMapperTest.testSelectByUser" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="UserMapperTest_testSelectByUser - 2019.01.15 at 12h 19m 37s.xml">
       <configuration name="UserMapperTest.testSelectByUser" configurationId="JUnit" />
     </history-entry>
@@ -700,9 +701,15 @@
     <history-entry file="UserMapperTest_testSelectByIdList - 2019.01.15 at 16h 07m 08s.xml">
       <configuration name="UserMapperTest.testSelectByIdList" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="UserMapperTest_testInsertList - 2019.01.15 at 16h 15m 56s.xml">
+      <configuration name="UserMapperTest.testInsertList" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserMapperTest_testInsertList - 2019.01.15 at 16h 18m 33s.xml">
+      <configuration name="UserMapperTest.testInsertList" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30950000" />
+    <option name="totallyTimeSpent" value="31826000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -728,7 +735,7 @@
       <window_info id="Image Layers" order="8" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32988358" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32988358" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32988358" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39974126" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -787,7 +794,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="添加一个简单例子" />
     <MESSAGE value="添加用户数据库接口，并进行测试" />
     <MESSAGE value="添加根据用户id获取角色信息，并带有当前用户名的例子" />
     <MESSAGE value="添加根据用户id获取角色信息，并带有当前用户名的例子（方式2）" />
@@ -812,7 +818,8 @@
     <MESSAGE value="添加where标签的用法" />
     <MESSAGE value="添加set标签的例子" />
     <MESSAGE value="添加foreach标签的例子" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加foreach标签的例子" />
+    <MESSAGE value="添加使用foreach标签批量插入的例子" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加使用foreach标签批量插入的例子" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -1183,8 +1190,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lin/mapper/UserMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="75" column="18" selection-start-line="75" selection-start-column="8" selection-end-line="75" selection-end-column="18" />
+        <state relative-caret-position="568">
+          <caret line="79" column="19" selection-start-line="79" selection-start-column="8" selection-end-line="79" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1193,15 +1200,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/com/lin/mapper/UserMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="261" column="26" selection-start-line="261" selection-start-column="16" selection-end-line="261" selection-end-column="26" />
+        <state relative-caret-position="549">
+          <caret line="282" column="24" lean-forward="true" selection-start-line="282" selection-start-column="24" selection-end-line="282" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/lin/mapper/UserMapperTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="411" column="62" selection-start-line="411" selection-start-column="62" selection-end-line="411" selection-end-column="62" />
+        <state relative-caret-position="402">
+          <caret line="441" column="25" selection-start-line="441" selection-start-column="25" selection-end-line="441" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

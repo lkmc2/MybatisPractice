@@ -273,4 +273,14 @@
         </foreach>
     </insert>
 
+    <!--Mybatis上下文中默认使用了_parameter作为map参数的key，$号表示纯粹的字符串替换，#表示变量替换-->
+    <update id="updateByMap">
+        update sys_user
+        set
+        <foreach collection="_parameter" item="val" index="key" separator=",">
+            ${key} = #{val}
+        </foreach>
+        where id = #{id}
+    </update>
+
 </mapper>
