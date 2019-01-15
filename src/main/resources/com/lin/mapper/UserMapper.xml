@@ -169,6 +169,7 @@
     </select>
 
     <!--property != null所有属性都可以使用，property != ''只有字符串可以使用，条件间的连接符使用and或or-->
+    <!--where标签可以替代where 1 = 1语句的作用-->
     <select id="selectByUser" resultType="com.lin.model.SysUser">
         select
            id,
@@ -179,13 +180,14 @@
            head_img headImg,
            create_time createTime
         from sys_user
-        where 1 = 1
-        <if test="userName != null and userName != ''">
-            and user_name like concat('%', #{userName}, '%')
-        </if>
-        <if test="userEmail != null and userEmail != ''">
-            and user_email = #{userEmail}
-        </if>
+        <where>
+            <if test="userName != null and userName != ''">
+                and user_name like concat('%', #{userName}, '%')
+            </if>
+            <if test="userEmail != null and userEmail != ''">
+                and user_email = #{userEmail}
+            </if>
+        </where>
     </select>
 
     <!--set语句最后加上id = #{id}，防止所有条件为null时出错-->
