@@ -2,10 +2,6 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.lin.mapper.CountryMapper">
-
-    <select id="selectAll" resultType="Country">
-        select id, countryname, countrycode from country
-    </select>
+<mapper namespace="com.lin.mapper.PrivilegeMapper">
 
 </mapper>
