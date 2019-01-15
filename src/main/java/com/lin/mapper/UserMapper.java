@@ -62,4 +62,7 @@ public interface UserMapper {
     // 2.当只输入邮箱时，根据邮箱进行完全匹配
     // 3.当同时输入用户名和邮箱时，用这两个条件去查询匹配的用户
     List<SysUser> selectByUser(SysUser sysUser);
+
+    // 根据id选择性更新属性
+    int updateByIdSelective(SysUser sysUser);
 }

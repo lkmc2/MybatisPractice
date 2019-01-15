@@ -182,4 +182,30 @@
         </if>
     </select>
 
+    <!--set语句最后加上id = #{id}，防止所有条件为null时出错-->
+    <update id="updateByIdSelective">
+        update sys_user
+        set
+            <if test="userName != null and userName !=''">
+                user_name = #{userName},
+            </if>
+            <if test="userPassword != null and userPassword !=''">
+                user_password = #{userPassword},
+            </if>
+            <if test="userEmail != null and userEmail !=''">
+                user_email = #{userEmail},
+            </if>
+            <if test="userInfo != null and userInfo !=''">
+                user_info = #{userInfo},
+            </if>
+            <if test="headImg != null">
+                head_img = #{headImg, jdbcType=BLOB},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime, jdbcType=TIMESTAMP},
+            </if>
+            id = #{id}
+        where id = #{id}
+    </update>
+
 </mapper>

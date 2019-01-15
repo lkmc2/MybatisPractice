@@ -321,5 +321,31 @@ public class UserMapperTest extends BaseMapperTest {
             assertEquals(0, userList.size());
         }
     }
-    
+
+    @Test
+    public void testUpdateByIdSelective() {
+        try(SqlSession sqlSession = getSqlSession()) {
+            // 获取UserMapper接口
+            UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+
+            // 新建一个user对象
+            SysUser user = new SysUser();
+            // 设置id为1的用户信息
+            user.setId(1L);
+            user.setUserEmail("test@163.com");
+
+            // 选择性更新用户信息，获取受影响行数
+            int effectCount = userMapper.updateByIdSelective(user);
+            // 受影响行数必须是1
+            assertEquals(1, effectCount);
+
+            // 查询修改后的数据
+            user = userMapper.selectById(1L);
+
+            // 修改后的用户名不变，邮箱改变
+            assertEquals("admin", user.getUserName());
+            assertEquals("test@163.com", user.getUserEmail());
+        }
+    }
+
 }
