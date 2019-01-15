@@ -62,20 +62,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/com/lin/mapper/UserMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="202" column="16" lean-forward="true" selection-start-line="202" selection-start-column="16" selection-end-line="202" selection-end-column="16" />
+            <state relative-caret-position="201">
+              <caret line="187" column="39" selection-start-line="187" selection-start-column="39" selection-end-line="187" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/lin/mapper/UserMapperTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="294" column="16" selection-start-line="294" selection-start-column="16" selection-end-line="294" selection-end-column="16" />
+            <state relative-caret-position="440">
+              <caret line="319" column="45" lean-forward="true" selection-start-line="319" selection-start-column="45" selection-end-line="319" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -334,7 +334,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547541717279" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547542444346" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="database.console.LAST_STATE" value="false" />
@@ -481,7 +481,7 @@
       <option name="presentableId" value="Default" />
       <updated>1547452865585</updated>
       <workItem from="1547452870347" duration="19651000" />
-      <workItem from="1547517434089" duration="14610000" />
+      <workItem from="1547517434089" duration="15237000" />
     </task>
     <task id="LOCAL-00001" summary="添加Mybatis配置文件">
       <created>1547454834050</created>
@@ -686,28 +686,17 @@
       <option name="project" value="LOCAL" />
       <updated>1547541425533</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="添加多数据库支持的例子">
+      <created>1547541880412</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1547541880412</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UserMapperTest_testInsert2 - 2019.01.15 at 12h 39m 04s.xml">
-      <configuration name="UserMapperTest.testInsert2" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserMapperTest_testSelectByIdOrUserName - 2019.01.15 at 13h 10m 10s.xml">
-      <configuration name="UserMapperTest.testSelectByIdOrUserName" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserMapperTest_testSelectByIdOrUserName - 2019.01.15 at 13h 10m 33s.xml">
-      <configuration name="UserMapperTest.testSelectByIdOrUserName" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserMapperTest_testSelectByUser - 2019.01.15 at 13h 14m 11s.xml">
-      <configuration name="UserMapperTest.testSelectByUser" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserMapperTest_testUpdateByIdSelective - 2019.01.15 at 15h 52m 24s.xml">
-      <configuration name="UserMapperTest.testUpdateByIdSelective" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserMapperTest_testSelectByIdList - 2019.01.15 at 16h 07m 08s.xml">
-      <configuration name="UserMapperTest.testSelectByIdList" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="UserMapperTest_testInsertList - 2019.01.15 at 16h 15m 56s.xml">
       <configuration name="UserMapperTest.testInsertList" configurationId="JUnit" />
     </history-entry>
@@ -720,9 +709,27 @@
     <history-entry file="UserMapperTest_testSelectByUser - 2019.01.15 at 16h 36m 05s.xml">
       <configuration name="UserMapperTest.testSelectByUser" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="UserMapperTest_testSelectByUser - 2019.01.15 at 16h 42m 03s.xml">
+      <configuration name="UserMapperTest.testSelectByUser" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserMapperTest_testSelectByUser - 2019.01.15 at 16h 47m 46s.xml">
+      <configuration name="UserMapperTest.testSelectByUser" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserMapperTest_testSelectByUser - 2019.01.15 at 16h 48m 56s.xml">
+      <configuration name="UserMapperTest.testSelectByUser" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserMapperTest_testSelectByUser - 2019.01.15 at 16h 49m 33s.xml">
+      <configuration name="UserMapperTest.testSelectByUser" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserMapperTest_testSelectByUser - 2019.01.15 at 16h 50m 35s.xml">
+      <configuration name="UserMapperTest.testSelectByUser" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserMapperTest_testSelectByUser - 2019.01.15 at 16h 51m 25s.xml">
+      <configuration name="UserMapperTest.testSelectByUser" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32517000" />
+    <option name="totallyTimeSpent" value="33144000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -753,7 +760,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32988358" />
-      <window_info anchor="bottom" id="MyBatis Sql Log" order="7" weight="0.32988358" />
+      <window_info active="true" anchor="bottom" id="MyBatis Sql Log" order="7" visible="true" weight="0.32988358" />
       <window_info anchor="bottom" id="Database Console" order="8" weight="0.32988358" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32988358" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
@@ -807,7 +814,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="添加根据用户id获取角色信息，并带有当前用户名的例子（方式2）" />
     <MESSAGE value="添加使用insert插入的例子" />
     <MESSAGE value="添加selectKey的使用例子" />
     <MESSAGE value="添加update标签的用法" />
@@ -832,7 +838,8 @@
     <MESSAGE value="添加使用foreach标签批量插入的例子" />
     <MESSAGE value="添加使用foreach标签进行更新的例子" />
     <MESSAGE value="添加bind标签的例子" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加bind标签的例子" />
+    <MESSAGE value="添加多数据库支持的例子" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加多数据库支持的例子" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -1211,20 +1218,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/lin/mapper/UserMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="202" column="16" lean-forward="true" selection-start-line="202" selection-start-column="16" selection-end-line="202" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/lin/mapper/UserMapperTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="294" column="16" selection-start-line="294" selection-start-column="16" selection-end-line="294" selection-end-column="16" />
+        <state relative-caret-position="440">
+          <caret line="319" column="45" lean-forward="true" selection-start-line="319" selection-start-column="45" selection-end-line="319" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/lin/mapper/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="187" column="39" selection-start-line="187" selection-start-column="39" selection-end-line="187" selection-end-column="39" />
         </state>
       </provider>
     </entry>

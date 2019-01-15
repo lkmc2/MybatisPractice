@@ -172,6 +172,7 @@
     <!--where标签可以替代where 1 = 1语句的作用-->
     <!--使用bind标签声明语句变量，可用该变量替换and user_name like concat('%', #{userName}, '%')-->
     <!--使用bind标签可以解决不同数据库函数参数不一致的情况-->
+    <!--_databaseId用来识别当前数据库的类型-->
     <select id="selectByUser" resultType="com.lin.model.SysUser">
         select
            id,
@@ -184,8 +185,12 @@
         from sys_user
         <where>
             <if test="userName != null and userName != ''">
-                <bind name="userNameLike" value="'%' + userName + '%'" />
-                and user_name like #{userNameLike}
+                <if test="_databaseId == 'mysql'">
+                    and user_name like concat('%', #{userName}, '%')
+                </if>
+                <if test="_databaseId == 'oracle'">
+                    and user_name like '%'||#{userName}||'%'
+                </if>
             </if>
             <if test="userEmail != null and userEmail != ''">
                 and user_email = #{userEmail}
@@ -194,18 +199,18 @@
     </select>
 
     <!--指定databaseId可以针对不同的数据库编写不同的语句，有databaseId的标签优先级比没有databaseId的级别要高-->
-    <select id="selectByUser" databaseId="mysql">
-        select *
-        from sys_user
-        where user_name like concat('%', #{userName}, '%')
-    </select>
+    <!--<select id="selectByUser" databaseId="mysql">-->
+        <!--select *-->
+        <!--from sys_user-->
+        <!--where user_name like concat('%', #{userName}, '%')-->
+    <!--</select>-->
 
     <!--为Oracle指定该方法的实现语句-->
-    <select id="selectByUser" databaseId="oracle">
-        select *
-        from sys_user
-        where user_name like '%'||#{userName}||'%'
-    </select>
+    <!--<select id="selectByUser" databaseId="oracle">-->
+        <!--select *-->
+        <!--from sys_user-->
+        <!--where user_name like '%'||#{userName}||'%'-->
+    <!--</select>-->
 
     <!--set标签可以自动把最后的多余逗号删除，最后加上id = #{id}，防止所有条件为null时出错-->
     <update id="updateByIdSelective">
