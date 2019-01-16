@@ -38,7 +38,11 @@
     <resultMap id="rolePrivilegeListMapChoose" type="com.lin.model.SysRole">
         <discriminator column="enabled" javaType="int">
             <case value="1" resultMap="rolePrivilegeListMapSelect" />
-            <case value="0" resultMap="roleMap" />
+            <!--当指定resultType时，需制定属性的映射内容，不会对没有指定的属性进行映射-->
+            <case value="0" resultType="com.lin.model.SysRole" >
+                <id property="id" column="id"/>
+                <result property="roleName" column="role_name"/>
+            </case>
         </discriminator>
     </resultMap>
 
