@@ -30,23 +30,10 @@
     </resultMap>
 
     <!--collection标签可表示一对多-->
-    <resultMap id="userRoleListMap" type="com.lin.model.SysUser">
-        <id property="id" column="id"/>
-        <result property="userName" column="user_name"/>
-        <result property="userPassword" column="user_password"/>
-        <result property="userEmail" column="user_email"/>
-        <result property="userInfo" column="user_info"/>
-        <result property="headImg" column="head_img" jdbcType="BLOB"/>
-        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+    <resultMap id="userRoleListMap" extends="userMap" type="com.lin.model.SysUser">
         <!--collection标签将角色表的属性填充到roleList变量，columnPrefix是前缀名-->
-        <collection property="roleList" columnPrefix="role_" ofType="com.lin.model.SysRole">
-            <!--role相关属性-->
-            <id property="id" column="id"/>
-            <result property="roleName" column="role_name"/>
-            <result property="enabled" column="enabled"/>
-            <result property="createBy" column="create_by"/>
-            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
-        </collection>
+        <collection property="roleList" columnPrefix="role_"
+                    resultMap="com.lin.mapper.RoleMapper.roleMap"/>
     </resultMap>
 
     <select id="selectById" resultMap="userMap">

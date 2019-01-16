@@ -6,7 +6,7 @@
     <!--返回值角色类映射关系Map-->
     <resultMap id="roleMap" type="com.lin.model.SysRole">
         <!--role相关属性-->
-        <result property="id" column="id"/>
+        <id property="id" column="id"/>
         <result property="roleName" column="role_name"/>
         <result property="enabled" column="enabled"/>
         <result property="createBy" column="create_by"/>
