@@ -4,4 +4,11 @@
 
 <mapper namespace="com.lin.mapper.PrivilegeMapper">
 
+    <!--权限表的字段映射-->
+    <resultMap id="privilegeMap" type="com.lin.model.SysPrivilege">
+        <id property="id" column="id"/>
+        <result property="privilegeName" column="privilege_name"/>
+        <result property="privilegeUrl" column="privilege_url"/>
+    </resultMap>
+
 </mapper>

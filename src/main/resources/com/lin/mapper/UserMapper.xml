@@ -32,8 +32,9 @@
     <!--collection标签可表示一对多-->
     <resultMap id="userRoleListMap" extends="userMap" type="com.lin.model.SysUser">
         <!--collection标签将角色表的属性填充到roleList变量，columnPrefix是前缀名-->
+        <!--使用collection标签时，必须给其下面的属性配置id标签，否则效率会低一些-->
         <collection property="roleList" columnPrefix="role_"
-                    resultMap="com.lin.mapper.RoleMapper.roleMap"/>
+                    resultMap="com.lin.mapper.RoleMapper.rolePrivilegeListMap"/>
     </resultMap>
 
     <select id="selectById" resultMap="userMap">
@@ -400,10 +401,16 @@
             r.role_name role_role_name,
             r.enabled role_enabled,
             r.create_by role_create_by,
-            r.create_time role_create_time
+            r.create_time role_create_time,
+            # 因为使用了两次collection标签嵌套，这里要加两层前缀
+            p.id role_privilege_id,
+            p.privilege_name role_privilege_privilege_name,
+            p.privilege_url role_privilege_privilege_url
         from sys_user u
         inner join sys_user_role ur on u.id = ur.user_id
         inner join sys_role r on ur.role_id = r.id
+        inner join sys_role_privilege rp on rp.role_id = r.id
+        inner join sys_privilege p on p.id = rp.privilege_id
     </select>
 
 </mapper>

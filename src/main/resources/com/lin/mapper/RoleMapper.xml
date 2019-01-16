@@ -13,6 +13,13 @@
         <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
     </resultMap>
 
+    <!--extends会继承roleMap的字段-->
+    <!--collection表示一对多的关系，会将查询结果放入privilegeList变量中-->
+    <resultMap id="rolePrivilegeListMap" extends="roleMap" type="com.lin.model.SysRole">
+        <collection property="privilegeList" columnPrefix="privilege_"
+                    resultMap="com.lin.mapper.PrivilegeMapper.privilegeMap"/>
+    </resultMap>
+
     <select id="selectRoleById" resultMap="roleMap">
         select * from sys_role where id = #{id}
     </select>

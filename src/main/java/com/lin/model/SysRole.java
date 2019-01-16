@@ -1,6 +1,7 @@
 package com.lin.model;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * @author lkmc2
@@ -15,6 +16,8 @@ public class SysRole {
     private Integer createBy;
     private Date createTime;
     private SysUser user; // 用户信息
+
+    private List<SysPrivilege> privilegeList; // 角色包含的权限列表
 
     public Long getId() {
         return id;
@@ -54,5 +57,13 @@ public class SysRole {
 
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
+    }
+
+    public List<SysPrivilege> getPrivilegeList() {
+        return privilegeList;
+    }
+
+    public void setPrivilegeList(List<SysPrivilege> privilegeList) {
+        this.privilegeList = privilegeList;
     }
 }

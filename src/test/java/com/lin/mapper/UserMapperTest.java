@@ -1,6 +1,7 @@
 package com.lin.mapper;
 
 import com.lin.BaseMapperTest;
+import com.lin.model.SysPrivilege;
 import com.lin.model.SysRole;
 import com.lin.model.SysRoleExtend;
 import com.lin.model.SysUser;
@@ -513,6 +514,9 @@ public class UserMapperTest extends BaseMapperTest {
                 System.out.println("用户名：" + user.getUserName());
                 for (SysRole role : user.getRoleList()) {
                     System.out.println("角色名：" + role.getRoleName());
+                    for (SysPrivilege privilege : role.getPrivilegeList()) {
+                        System.out.println("权限名：" + privilege.getPrivilegeName());
+                    }
                 }
             }
         }
