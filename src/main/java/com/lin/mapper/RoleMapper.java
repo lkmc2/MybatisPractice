@@ -71,8 +71,8 @@ public interface RoleMapper {
     @Update({"update sys_role",
             "set role_name = #{roleName},",
                 "enabled = #{enabled},",
-                "create_by = #{createBy},",
-                "create_time = #{createTime, jdbcType=TIMESTAMP}",
+                "create_by = #{createInfo.createBy},",
+                "create_time = #{createInfo.createTime, jdbcType=TIMESTAMP}",
             "where id = #{id}" })
     int updateById(SysRole sysRole);
 
@@ -88,4 +88,7 @@ public interface RoleMapper {
 
     // 根据用户id选出角色列表
     List<SysRole> selectRoleByUserId(Long userId);
+
+    // 根据用户的id获取用户的角色信息（当enabled为1时，角色信息会包含权限信息，enabled为0时，角色不包含权限信息）
+    List<SysRole> selectRoleByUserIdChoose(Long userId);
 }

@@ -34,6 +34,14 @@
                     select="com.lin.mapper.PrivilegeMapper.selectPrivilegeByRoleId"/>
     </resultMap>
 
+    <!--discriminator标签相当于switch语句，enabled如果为1，返回rolePrivilegeListMapSelect，如果为0，返回roleMap-->
+    <resultMap id="rolePrivilegeListMapChoose" type="com.lin.model.SysRole">
+        <discriminator column="enabled" javaType="int">
+            <case value="1" resultMap="rolePrivilegeListMapSelect" />
+            <case value="0" resultMap="roleMap" />
+        </discriminator>
+    </resultMap>
+
     <select id="selectRoleById" resultMap="roleMap">
         select * from sys_role where id = #{id}
     </select>
@@ -52,6 +60,18 @@
     </select>
 
     <select id="selectRoleByUserId" resultMap="rolePrivilegeListMapSelect">
+        select
+            r.id,
+            r.role_name,
+            r.enabled,
+            r.create_by,
+            r.create_time
+        from sys_role r
+        inner join sys_user_role ur on ur.role_id = r.id
+        where ur.user_id = #{userId}
+    </select>
+
+    <select id="selectRoleByUserIdChoose" resultMap="rolePrivilegeListMapChoose">
         select
             r.id,
             r.role_name,
