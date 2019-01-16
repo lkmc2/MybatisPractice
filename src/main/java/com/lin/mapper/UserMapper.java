@@ -92,4 +92,7 @@ public interface UserMapper {
     // 获取所有的用户对应的所有角色
     List<SysUser> selectAllUserAndRoles();
 
+    // 调用存储过程查询用户信息
+    void selectUserById(SysUser user);
+
 }

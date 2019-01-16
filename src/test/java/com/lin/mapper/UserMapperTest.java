@@ -528,4 +528,20 @@ public class UserMapperTest extends BaseMapperTest {
         }
     }
 
+    @Test
+    public void testSelectUserById() {
+        try(SqlSession sqlSession = getSqlSession()) {
+            // 获取UserMapper接口
+            UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+
+            // 调用存储过程查询id为1的用户信息
+            SysUser user = new SysUser();
+            user.setId(1L);
+            userMapper.selectUserById(user);
+
+            assertNotNull(user.getUserName());
+            System.out.println("用户名：" + user.getUserName());
+        }
+    }
+
 }

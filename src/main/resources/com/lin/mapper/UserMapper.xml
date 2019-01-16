@@ -419,4 +419,17 @@
         inner join sys_privilege p on p.id = rp.privilege_id
     </select>
 
+    <!--调用存储过程，存储过程不支持二级缓存，需要关掉-->
+    <select id="selectUserById" statementType="CALLABLE" useCache="false">
+        { call select_user_by_id(
+                #{id, mode=IN},
+                #{userName, mode=OUT, jdbcType=VARCHAR},
+                #{userPassword, mode=OUT, jdbcType=VARCHAR},
+                #{userEmail, mode=OUT, jdbcType=VARCHAR},
+                #{userInfo, mode=OUT, jdbcType=VARCHAR},
+                #{headImg, mode=OUT, jdbcType=BLOB, javaType=_byte[]},
+                #{createTime, mode=OUT, jdbcType=TIMESTAMP}
+            ) }
+    </select>
+
 </mapper>
