@@ -37,6 +37,14 @@
                     resultMap="com.lin.mapper.RoleMapper.rolePrivilegeListMap"/>
     </resultMap>
 
+    <!--roleList变量中的其他值是根据主查询中的id作为RoleMapper.selectRoleById方法的参数来求出的-->
+    <resultMap id="userRoleListMapSelect" extends="userMap" type="com.lin.model.SysUser">
+        <collection property="roleList"
+                    fetchType="lazy"
+                    select="com.lin.mapper.RoleMapper.selectRoleByUserId"
+                    column="{userId=id}"/>
+    </resultMap>
+
     <select id="selectById" resultMap="userMap">
         select * from sys_user where id = #{id}
     </select>
@@ -372,8 +380,8 @@
         where u.id = #{id}
     </select>
 
-    <!--这里只查出role_id的值，role的其他属性通过userRoleMapSelect的association中的select中指定的方法来查出-->
-    <select id="selectUserAndRoleByIdSelect" resultMap="userRoleMapSelect">
+    <!--这里值查询了user的属性，roleList和roleList中的权限通过resultMap中的collection标签进行查询-->
+    <select id="selectUserAndRoleByIdSelect" resultMap="userRoleListMapSelect">
         select
             u.id,
             u.user_name,
@@ -381,10 +389,8 @@
             u.user_email,
             u.user_info,
             u.head_img,
-            u.create_time,
-            ur.role_id
+            u.create_time
         from sys_user u
-        inner join sys_user_role ur on u.id = ur.user_id
         where u.id = #{id}
     </select>
 

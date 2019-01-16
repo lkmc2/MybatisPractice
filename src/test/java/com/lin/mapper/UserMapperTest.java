@@ -489,14 +489,20 @@ public class UserMapperTest extends BaseMapperTest {
             // 获取UserMapper接口
             UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
 
-            // 特别注意，id为1的用户有两个角色，不适合这个例子
-            // 这里使用id为1001的用户
-            SysUser user = userMapper.selectUserAndRoleByIdSelect(1001L);
-            // 用户非空
+            SysUser user = userMapper.selectUserAndRoleByIdSelect(1L);
+            System.out.println("用户名：" + user.getUserName());
+
+            for (SysRole role : user.getRoleList()) {
+                System.out.println("角色名：" + role.getRoleName());
+                for (SysPrivilege privilege : role.getPrivilegeList()) {
+                    System.out.println("权限名：" + privilege.getPrivilegeName());
+                }
+            }
+
+            // 用户中的角色列表，以及角色列表中的权限列表都必须有数据
             assertNotNull(user);
-            System.out.println("调用user.getRole()");
-            // 用户的role属性非空
-            assertNotNull(user.getRole());
+            assertTrue(user.getRoleList().size() > 0);
+            assertTrue(user.getRoleList().get(0).getPrivilegeList().size() > 0);
         }
     }
 

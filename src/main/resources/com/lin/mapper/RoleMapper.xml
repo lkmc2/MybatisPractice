@@ -19,8 +19,19 @@
     <!--extends会继承roleMap的字段-->
     <!--collection表示一对多的关系，会将查询结果放入privilegeList变量中-->
     <resultMap id="rolePrivilegeListMap" extends="roleMap" type="com.lin.model.SysRole">
-        <collection property="privilegeList" columnPrefix="privilege_"
+        <collection property="privilegeList"
+                    columnPrefix="privilege_"
                     resultMap="com.lin.mapper.PrivilegeMapper.privilegeMap"/>
+    </resultMap>
+
+    <resultMap id="rolePrivilegeListMapSelect" extends="roleMap" type="com.lin.model.SysRole">
+        <!--collection表示一对多的关系，会将查询结果放入privilegeList变量中-->
+        <!--lazy表示懒加载-->
+        <!--roleId=id表示会在主查询中把查出来的id作为PrivilegeMapper.selectPrivilegeByRoleId方法的参数-->
+        <collection property="privilegeList"
+                    fetchType="lazy"
+                    column="{roleId=id}"
+                    select="com.lin.mapper.PrivilegeMapper.selectPrivilegeByRoleId"/>
     </resultMap>
 
     <select id="selectRoleById" resultMap="roleMap">
@@ -39,4 +50,17 @@
         inner join sys_role_privilege rp on rp.role_id = r.id
         inner join sys_privilege p on p.id = rp.privilege_id
     </select>
+
+    <select id="selectRoleByUserId" resultMap="rolePrivilegeListMapSelect">
+        select
+            r.id,
+            r.role_name,
+            r.enabled,
+            r.create_by,
+            r.create_time
+        from sys_role r
+        inner join sys_user_role ur on ur.role_id = r.id
+        where ur.user_id = #{userId}
+    </select>
+
 </mapper>

@@ -85,4 +85,7 @@ public interface RoleMapper {
 
     // 选出所有的角色和角色对应的权限
     List<SysRole> selectAllRoleAndPrivileges();
+
+    // 根据用户id选出角色列表
+    List<SysRole> selectRoleByUserId(Long userId);
 }
