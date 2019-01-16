@@ -6,7 +6,6 @@ import com.lin.model.SysRole;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 
-import java.util.Date;
 import java.util.List;
 
 import static org.junit.Assert.*;
@@ -72,8 +71,8 @@ public class RoleMapperTest extends BaseMapperTest {
 
             role.setRoleName("数据库拥有者");
             role.setEnabled(1);
-            role.setCreateBy(1);
-            role.setCreateTime(new Date());
+//            role.setCreateBy(1);
+//            role.setCreateTime(new Date());
 
             // 插入角色
             int effectCount = roleMapper.insert(role);
@@ -101,8 +100,8 @@ public class RoleMapperTest extends BaseMapperTest {
 
             role.setRoleName("数据库拥有者");
             role.setEnabled(1);
-            role.setCreateBy(1);
-            role.setCreateTime(new Date());
+//            role.setCreateBy(1);
+//            role.setCreateTime(new Date());
 
             // 插入角色
             int effectCount = roleMapper.insert2(role);
@@ -130,8 +129,8 @@ public class RoleMapperTest extends BaseMapperTest {
 
             role.setRoleName("数据库拥有者");
             role.setEnabled(1);
-            role.setCreateBy(1);
-            role.setCreateTime(new Date());
+//            role.setCreateBy(1);
+//            role.setCreateTime(new Date());
 
             // 插入角色
             int effectCount = roleMapper.insert3(role);
@@ -159,8 +158,8 @@ public class RoleMapperTest extends BaseMapperTest {
             role.setId(1L);
             role.setRoleName("数据库拥有者");
             role.setEnabled(1);
-            role.setCreateBy(1);
-            role.setCreateTime(new Date());
+//            role.setCreateBy(1);
+//            role.setCreateTime(new Date());
 
             // 更新id为1的角色信息
             int effectCount = roleMapper.updateById(role);

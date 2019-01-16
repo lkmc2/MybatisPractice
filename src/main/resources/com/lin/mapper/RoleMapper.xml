@@ -9,8 +9,11 @@
         <id property="id" column="id"/>
         <result property="roleName" column="role_name"/>
         <result property="enabled" column="enabled"/>
-        <result property="createBy" column="create_by"/>
-        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <!--使用association标签表示一对一关系-->
+        <association property="createInfo" javaType="com.lin.model.CreateInfo">
+            <result property="createBy" column="create_by"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        </association>
     </resultMap>
 
     <!--extends会继承roleMap的字段-->

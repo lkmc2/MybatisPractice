@@ -1,6 +1,5 @@
 package com.lin.model;
 
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -13,8 +12,9 @@ public class SysRole {
     private Long id;
     private String roleName;
     private Integer enabled;
-    private Integer createBy;
-    private Date createTime;
+
+    private CreateInfo createInfo; // 创建信息
+
     private SysUser user; // 用户信息
 
     private List<SysPrivilege> privilegeList; // 角色包含的权限列表
@@ -43,20 +43,20 @@ public class SysRole {
         this.enabled = enabled;
     }
 
-    public Integer getCreateBy() {
-        return createBy;
+    public CreateInfo getCreateInfo() {
+        return createInfo;
     }
 
-    public void setCreateBy(Integer createBy) {
-        this.createBy = createBy;
+    public void setCreateInfo(CreateInfo createInfo) {
+        this.createInfo = createInfo;
     }
 
-    public Date getCreateTime() {
-        return createTime;
+    public SysUser getUser() {
+        return user;
     }
 
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
+    public void setUser(SysUser user) {
+        this.user = user;
     }
 
     public List<SysPrivilege> getPrivilegeList() {
