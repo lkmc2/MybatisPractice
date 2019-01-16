@@ -499,4 +499,23 @@ public class UserMapperTest extends BaseMapperTest {
         }
     }
 
+    @Test
+    public void testSelectAllUserAndRoles() {
+        try(SqlSession sqlSession = getSqlSession()) {
+            // 获取UserMapper接口
+            UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+
+            // 获取所有的用户和角色信息
+            List<SysUser> userList = userMapper.selectAllUserAndRoles();
+            System.out.println("用户数：" + userList.size());
+
+            for (SysUser user : userList) {
+                System.out.println("用户名：" + user.getUserName());
+                for (SysRole role : user.getRoleList()) {
+                    System.out.println("角色名：" + role.getRoleName());
+                }
+            }
+        }
+    }
+
 }

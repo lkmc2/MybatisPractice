@@ -1,6 +1,7 @@
 package com.lin.model;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * @author lkmc2
@@ -18,6 +19,8 @@ public class SysUser {
     private Date createTime;
 
     private SysRole role; // 用户角色
+
+    private List<SysRole> roleList; // 用户的角色集合
 
     public Long getId() {
         return id;
@@ -81,5 +84,13 @@ public class SysUser {
 
     public void setRole(SysRole role) {
         this.role = role;
+    }
+
+    public List<SysRole> getRoleList() {
+        return roleList;
+    }
+
+    public void setRoleList(List<SysRole> roleList) {
+        this.roleList = roleList;
     }
 }

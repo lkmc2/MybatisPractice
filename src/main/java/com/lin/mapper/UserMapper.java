@@ -87,4 +87,7 @@ public interface UserMapper {
 
     // 根据用户id获取用户信息和用户的角色信息（方式3，使用resultMap作为返回值，association标签的嵌套查询）
     SysUser selectUserAndRoleByIdSelect(Long id);
+
+    // 获取所有的用户对应的所有角色
+    List<SysUser> selectAllUserAndRoles();
 }
