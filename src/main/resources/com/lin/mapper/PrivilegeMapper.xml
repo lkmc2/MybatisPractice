@@ -11,4 +11,11 @@
         <result property="privilegeUrl" column="privilege_url"/>
     </resultMap>
 
+    <select id="selectPrivilegeByRoleId" resultMap="privilegeMap">
+        select p.*
+        from sys_privilege p
+        inner join sys_role_privilege rp on rp.privilege_id = p.id
+        where rp.role_id = #{roleId}
+    </select>
+
 </mapper>

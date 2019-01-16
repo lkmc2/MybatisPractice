@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8f0665e-147f-4556-982f-86ef8922dd92" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lin/model/CreateInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lin/model/SysRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lin/model/SysRole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lin/mapper/RoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lin/mapper/RoleMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/lin/mapper/RoleMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/lin/mapper/RoleMapperTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lin/mapper/PrivilegeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lin/mapper/PrivilegeMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lin/mapper/PrivilegeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lin/mapper/PrivilegeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lin/mapper/PrivilegeMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/lin/mapper/PrivilegeMapperTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -57,66 +56,31 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/lin/model/SysUser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1735#1736#0" expanded="true" />
-                <element signature="e#1766#1767#0" expanded="true" />
-                <element signature="e#1821#1822#0" expanded="true" />
-                <element signature="e#1861#1862#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/com/lin/mapper/UserMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="573">
-              <caret line="413" column="13" selection-start-line="413" selection-start-column="13" selection-end-line="413" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/com/lin/mapper/PrivilegeMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+            <state relative-caret-position="323">
+              <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/lin/model/SysRole.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/lin/mapper/PrivilegeMapperTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="45" column="39" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
+            <state relative-caret-position="123">
+              <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
               <folding>
-                <element signature="e#880#881#0" expanded="true" />
-                <element signature="e#936#937#0" expanded="true" />
-                <element signature="e#980#981#0" expanded="true" />
-                <element signature="e#1012#1013#0" expanded="true" />
-                <element signature="e#1039#1040#0" expanded="true" />
-                <element signature="e#1080#1081#0" expanded="true" />
-                <element signature="e#1112#1113#0" expanded="true" />
-                <element signature="e#1209#1210#0" expanded="true" />
-                <element signature="e#1245#1246#0" expanded="true" />
-                <element signature="e#1315#1316#0" expanded="true" />
-                <element signature="e#1365#1366#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/lin/mapper/UserMapperTest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lin/mapper/PrivilegeMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="500" column="5" lean-forward="true" selection-start-line="500" selection-start-column="5" selection-end-line="500" selection-end-column="5" />
+            <state relative-caret-position="199">
+              <caret line="18" column="17" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -125,10 +89,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/lin/mapper/UserMapperTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="169">
+              <caret line="517" column="44" lean-forward="true" selection-start-line="517" selection-start-column="44" selection-end-line="517" selection-end-column="44" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/lin/mapper/RoleMapperTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-477">
-              <caret line="163" column="26" lean-forward="true" selection-start-line="163" selection-start-column="26" selection-end-line="163" selection-end-column="26" />
+            <state relative-caret-position="397">
+              <caret line="209" column="57" lean-forward="true" selection-start-line="209" selection-start-column="57" selection-end-line="209" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -151,8 +127,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/com/lin/mapper/RoleMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+            <state relative-caret-position="278">
+              <caret line="22" column="65" selection-start-line="22" selection-start-column="65" selection-end-line="22" selection-end-column="65" />
             </state>
           </provider>
         </entry>
@@ -171,18 +147,6 @@
                 <element signature="e#432#433#0" expanded="true" />
                 <element signature="e#482#483#0" expanded="true" />
                 <element signature="e#526#527#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/lin/mapper/RoleMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="606">
-              <caret line="85" column="17" selection-start-line="85" selection-start-column="17" selection-end-line="85" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -236,8 +200,6 @@
         <option value="$PROJECT_DIR$/src/test/java/com/lin/MyMapperProxyTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/lin/demo/MyMapperProxyTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lin/demo/MyMapperProxy.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lin/mapper/PrivilegeMapper.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/lin/mapper/PrivilegeMapperTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lin/provider/PrivilegeProvider.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/lin/generator/Generator.java" />
@@ -254,7 +216,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/lin/model/SysUser.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lin/mapper/UserMapper.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/075c43fa-9b7f-4d89-96e6-68de9372c3f3/console.sql" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/lin/mapper/PrivilegeMapper.xml" />
         <option value="$PROJECT_DIR$/src/test/java/com/lin/mapper/UserMapperTest.java" />
         <option value="$PROJECT_DIR$/src/main/resources/com/lin/mapper/UserMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/lin/mapper/RoleMapper.java" />
@@ -262,6 +223,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/lin/model/SysRole.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/lin/mapper/RoleMapperTest.java" />
         <option value="$PROJECT_DIR$/src/main/resources/com/lin/mapper/RoleMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lin/mapper/PrivilegeMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/lin/mapper/PrivilegeMapper.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/com/lin/mapper/PrivilegeMapperTest.java" />
       </list>
     </option>
   </component>
@@ -448,7 +412,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547615843045" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547616462577" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="database.console.LAST_STATE" value="false" />
@@ -496,7 +460,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.RoleMapperTest.testSelectAllUserAndRoles">
+  <component name="RunManager" selected="JUnit.PrivilegeMapperTest.testSelectPrivilegeByRoleId">
+    <configuration name="PrivilegeMapperTest.testSelectPrivilegeByRoleId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MybatisPractice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lin.mapper.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.lin.mapper" />
+      <option name="MAIN_CLASS_NAME" value="com.lin.mapper.PrivilegeMapperTest" />
+      <option name="METHOD_NAME" value="testSelectPrivilegeByRoleId" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RoleMapperTest.testSelectAllUserAndRoles" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MybatisPractice" />
       <extension name="coverage">
@@ -524,22 +504,6 @@
       <option name="PACKAGE_NAME" value="com.lin.mapper" />
       <option name="MAIN_CLASS_NAME" value="com.lin.mapper.UserMapperTest" />
       <option name="METHOD_NAME" value="testSelectAllUserAndRoles" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserMapperTest.testSelectUserAndRoleById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MybatisPractice" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.lin.mapper.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.lin.mapper" />
-      <option name="MAIN_CLASS_NAME" value="com.lin.mapper.UserMapperTest" />
-      <option name="METHOD_NAME" value="testSelectUserAndRoleById" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -579,11 +543,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PrivilegeMapperTest.testSelectPrivilegeByRoleId" />
         <item itemvalue="JUnit.RoleMapperTest.testSelectAllUserAndRoles" />
         <item itemvalue="JUnit.UserMapperTest.testSelectAllUserAndRoles" />
         <item itemvalue="JUnit.UserMapperTest.testSelectUserAndRoleByIdSelect" />
         <item itemvalue="JUnit.UserMapperTest.testSelectUserAndRoleById2" />
-        <item itemvalue="JUnit.UserMapperTest.testSelectUserAndRoleById" />
       </list>
     </recent_temporary>
   </component>
@@ -599,7 +563,7 @@
       <updated>1547452865585</updated>
       <workItem from="1547452870347" duration="19651000" />
       <workItem from="1547517434089" duration="26481000" />
-      <workItem from="1547609293923" duration="5294000" />
+      <workItem from="1547609293923" duration="5965000" />
     </task>
     <task id="LOCAL-00001" summary="添加Mybatis配置文件">
       <created>1547454834050</created>
@@ -923,16 +887,17 @@
       <option name="project" value="LOCAL" />
       <updated>1547615399734</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="将创建信息单独提取成一个类，并使用association标签进行一对一关联">
+      <created>1547615920063</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1547615920063</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UserMapperTest_testSelectUserAndRoleByIdSelect - 2019.01.15 at 23h 03m 25s.xml">
-      <configuration name="UserMapperTest.testSelectUserAndRoleByIdSelect" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserMapperTest_testSelectAllUserAndRoles - 2019.01.16 at 12h 05m 03s.xml">
-      <configuration name="UserMapperTest.testSelectAllUserAndRoles" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="UserMapperTest_testSelectAllUserAndRoles - 2019.01.16 at 12h 08m 00s.xml">
       <configuration name="UserMapperTest.testSelectAllUserAndRoles" configurationId="JUnit" />
     </history-entry>
@@ -957,9 +922,15 @@
     <history-entry file="RoleMapperTest_testSelectAllUserAndRoles - 2019.01.16 at 13h 08m 43s.xml">
       <configuration name="RoleMapperTest.testSelectAllUserAndRoles" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="RoleMapperTest_testSelectAllUserAndRoles - 2019.01.16 at 13h 17m 50s.xml">
+      <configuration name="RoleMapperTest.testSelectAllUserAndRoles" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PrivilegeMapperTest_testSelectPrivilegeByRoleId - 2019.01.16 at 13h 27m 48s.xml">
+      <configuration name="PrivilegeMapperTest.testSelectPrivilegeByRoleId" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49682000" />
+    <option name="totallyTimeSpent" value="50353000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -985,7 +956,7 @@
       <window_info id="Image Layers" order="8" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32988358" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.45278138" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.45278138" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39974126" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1068,7 +1039,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="添加动态插入的例子" />
     <MESSAGE value="添加动态查询choose、when、otherwise标签的用法" />
     <MESSAGE value="添加where标签的用法" />
     <MESSAGE value="添加set标签的例子" />
@@ -1093,19 +1063,8 @@
     <MESSAGE value="简化collection标签的写法" />
     <MESSAGE value="使用两层collection标签嵌套，完成两层一对多的映射" />
     <MESSAGE value="添加一个collection标签的例子" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加一个collection标签的例子" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/lin/mapper/RoleMapperTest.java</url>
-          <line>209</line>
-          <properties />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="将创建信息单独提取成一个类，并使用association标签进行一对一关联" />
+    <option name="LAST_COMMIT_MESSAGE" value="将创建信息单独提取成一个类，并使用association标签进行一对一关联" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -1121,13 +1080,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="15" column="32" lean-forward="true" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://075c43fa-9b7f-4d89-96e6-68de9372c3f3/schema/mybatis/table/sys_role">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1152,44 +1104,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://075c43fa-9b7f-4d89-96e6-68de9372c3f3/schema/mybatis/table/sys_role_privilege">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/lin/mapper/PrivilegeMapperTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="27" column="37" lean-forward="true" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://075c43fa-9b7f-4d89-96e6-68de9372c3f3/schema/mybatis/table/sys_privilege">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lin/provider/PrivilegeProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="11" column="45" lean-forward="true" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lin/mapper/PrivilegeMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1386,13 +1304,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/lin/mapper/PrivilegeMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/com/lin/mapper/UserMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="573">
@@ -1430,16 +1341,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/lin/mapper/UserMapperTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="500" column="5" lean-forward="true" selection-start-line="500" selection-start-column="5" selection-end-line="500" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lin/mapper/UserMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="98">
@@ -1467,17 +1368,75 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/lin/mapper/RoleMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/lin/mapper/RoleMapperTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+        <state relative-caret-position="397">
+          <caret line="209" column="57" lean-forward="true" selection-start-line="209" selection-start-column="57" selection-end-line="209" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/lin/mapper/RoleMapperTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/lin/mapper/RoleMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-477">
-          <caret line="163" column="26" lean-forward="true" selection-start-line="163" selection-start-column="26" selection-end-line="163" selection-end-column="26" />
+        <state relative-caret-position="278">
+          <caret line="22" column="65" selection-start-line="22" selection-start-column="65" selection-end-line="22" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://075c43fa-9b7f-4d89-96e6-68de9372c3f3/schema/mybatis/table/sys_role">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/lin/mapper/PrivilegeMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://075c43fa-9b7f-4d89-96e6-68de9372c3f3/schema/mybatis/table/sys_privilege">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://075c43fa-9b7f-4d89-96e6-68de9372c3f3/schema/mybatis/table/sys_role_privilege">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/lin/mapper/PrivilegeMapperTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lin/mapper/PrivilegeMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="18" column="17" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/lin/mapper/UserMapperTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="517" column="44" lean-forward="true" selection-start-line="517" selection-start-column="44" selection-end-line="517" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
