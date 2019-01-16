@@ -82,4 +82,7 @@ public interface RoleMapper {
 
     // 根据id选出角色
     SysRole selectRoleById(Long id);
+
+    // 选出所有的角色和角色对应的权限
+    List<SysRole> selectAllRoleAndPrivileges();
 }

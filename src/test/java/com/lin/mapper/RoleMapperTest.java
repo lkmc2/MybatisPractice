@@ -1,6 +1,7 @@
 package com.lin.mapper;
 
 import com.lin.BaseMapperTest;
+import com.lin.model.SysPrivilege;
 import com.lin.model.SysRole;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
@@ -196,6 +197,25 @@ public class RoleMapperTest extends BaseMapperTest {
             // 默认openSession()是不自动提交的，不回滚也不会提交到数据库
             sqlSession.rollback();
             sqlSession.close();
+        }
+    }
+
+    @Test
+    public void testSelectAllUserAndRoles() {
+        try(SqlSession sqlSession = getSqlSession()) {
+            // 获取RoleMapper
+            RoleMapper roleMapper = sqlSession.getMapper(RoleMapper.class);
+
+            // 获取所有的用户和角色信息
+            List<SysRole> roleList = roleMapper.selectAllRoleAndPrivileges();
+            System.out.println("角色数：" + roleList.size());
+
+            for (SysRole role : roleList) {
+                System.out.println("角色名：" + role.getRoleName());
+                for (SysPrivilege privilege  : role.getPrivilegeList()) {
+                    System.out.println("权限名：" + privilege.getPrivilegeName());
+                }
+            }
         }
     }
 
