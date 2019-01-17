@@ -4,13 +4,9 @@
 
 <mapper namespace="com.lin.mapper.RoleMapper">
 
-    <!--开启二级缓存-->
+    <!--开启二级缓存（使用EhCache缓存）-->
     <!--<cache/>-->
-    <cache
-            eviction="FIFO"
-            flushInterval="60000"
-            size="512"
-            readOnly="false"/>
+    <cache type="org.mybatis.caches.ehcache.EhcacheCache"/>
     <!--默认的二级缓存会有如下效果-->
     <!--1.映射语句文件中所有的select语句将会被缓存-->
     <!--2.映射语句文件中所有的insert、update、delete语句会刷新缓存-->
