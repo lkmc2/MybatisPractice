@@ -106,5 +106,60 @@ public class CacheTest extends BaseMapperTest {
             assertNotEquals(role2, user3);
         }
     }
-    
+
+    // 测试脏数据
+    @Test
+    public void testDirtyData() {
+        try(SqlSession sqlSession = getSqlSession()) {
+            // 获取UserMapper接口
+            UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+
+            // 根据用户id选出用户和角色信息
+            SysUser user = userMapper.selectUserAndRoleById(1001L);
+            assertEquals("普通用户", user.getRole().getRoleName());
+            System.out.println("角色名：" + user.getRole().getRoleName());
+        }
+
+        System.out.println("开启一个新Session");
+
+        // 开启一个新Session
+        try(SqlSession sqlSession = getSqlSession()) {
+            // 获取RoleMapper接口
+            RoleMapper roleMapper = sqlSession.getMapper(RoleMapper.class);
+
+            // 获取id为2的角色
+            SysRole role = roleMapper.selectById(2L);
+            role.setRoleName("脏数据");
+            roleMapper.updateById(role);
+
+            // 提交修改
+            sqlSession.commit();
+        }
+
+        System.out.println("开启另一个新Session");
+
+        try(SqlSession sqlSession = getSqlSession()) {
+            // 获取UserMapper接口
+            UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+            // 获取RoleMapper接口
+            RoleMapper roleMapper = sqlSession.getMapper(RoleMapper.class);
+
+            // 根据用户id选出用户和角色信息
+            SysUser user = userMapper.selectUserAndRoleById(1001L);
+            // 获取id为2的角色
+            SysRole role = roleMapper.selectById(2L);
+
+            assertEquals("普通用户", user.getRole().getRoleName());
+            assertEquals("脏数据", role.getRoleName());
+            System.out.println("角色名：" + user.getRole().getRoleName());
+
+            // 还原数据
+            role.setRoleName("普通用户");
+            roleMapper.updateById(role);
+
+            // 提交修改
+            sqlSession.commit();
+        }
+    }
+
 }

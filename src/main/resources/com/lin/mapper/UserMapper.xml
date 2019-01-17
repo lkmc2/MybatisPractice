@@ -6,6 +6,9 @@
 
     <!--开启二级缓存-->
     <!--<cache/>-->
+    <!--使用参照缓存可以避免脏数据-->
+    <cache-ref namespace="com.lin.mapper.UserMapper"/>
+
     <cache
             eviction="FIFO"
             flushInterval="60000"

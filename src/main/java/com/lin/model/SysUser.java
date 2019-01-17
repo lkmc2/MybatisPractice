@@ -1,5 +1,6 @@
 package com.lin.model;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
@@ -7,8 +8,11 @@ import java.util.List;
  * @author lkmc2
  * @date 2019/1/14
  * @description 用户表
+ * 二级缓存使用可读写缓存配置，需要进行Serializable序列化缓存
  */
-public class SysUser {
+public class SysUser implements Serializable {
+    private static final long serialVersionUID = 6320941908222938912L;
+
     // Mybatis默认是数据库下划线转驼峰命名
     private Long id;
     private String userName;
