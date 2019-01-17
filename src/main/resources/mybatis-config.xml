@@ -28,6 +28,11 @@
                 handler="com.lin.type.EnabledTypeHandler"/>
     </typeHandlers>
 
+    <!--启用自定义的下划线转驼峰插件-->
+    <plugins>
+        <plugin interceptor="com.lin.plugin.CameHumpInterceptor"/>
+    </plugins>
+
     <!--配置数据库连接信息-->
     <environments default="development">
         <environment id="development">
