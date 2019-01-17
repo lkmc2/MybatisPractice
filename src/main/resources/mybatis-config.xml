@@ -10,6 +10,8 @@
         <!--<setting name="mapUnderscoreToCamelCase" value="true"/>-->
         <!--启动懒加载-->
         <setting name="aggressiveLazyLoading" value="false"/>
+        <!--开启二级缓存-->
+        <setting name="cacheEnabled" value="true"/>
     </settings>
 
     <!--配置一个包的别名，这样返回值可以只写类名，不写包名-->
