@@ -95,4 +95,7 @@ public interface UserMapper {
     // 调用存储过程查询用户信息
     void selectUserById(SysUser user);
 
+    // 使用存储过程分页查询（使用Map传递参数）
+    List<SysUser> selectUserPage(Map<String, Object> params);
+
 }

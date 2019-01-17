@@ -544,4 +544,30 @@ public class UserMapperTest extends BaseMapperTest {
         }
     }
 
+    @Test
+    public void testSelectUserPage() {
+        try(SqlSession sqlSession = getSqlSession()) {
+            // 获取UserMapper接口
+            UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+
+            // 为Map设置查询参数
+            Map<String, Object> params = new HashMap<>();
+            params.put("userName", "ad");
+            params.put("offset", "0");
+            params.put("limit", "10");
+
+            // 使用存储过程分页查询
+            List<SysUser> userList = userMapper.selectUserPage(params);
+
+            // 获取存储过程的输出参数
+            Long total = (Long) params.get("total");
+            assertTrue(total >= 1);
+            System.out.println("总数：" + total);
+
+            for (SysUser user : userList) {
+                System.out.println("用户名：" + user.getUserName());
+            }
+        }
+    }
+
 }

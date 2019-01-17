@@ -432,4 +432,13 @@
             ) }
     </select>
 
+    <select id="selectUserPage" statementType="CALLABLE" useCache="false" resultMap="userMap">
+       { call select_user_page(
+          #{userName, mode=IN},
+          #{offset, mode=IN},
+          #{limit, mode=IN},
+          #{total, mode=OUT, jdbcType=BIGINT}
+        ) }
+    </select>
+
 </mapper>
