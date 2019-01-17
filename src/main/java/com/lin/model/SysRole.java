@@ -1,5 +1,7 @@
 package com.lin.model;
 
+import com.lin.type.Enabled;
+
 import java.util.List;
 
 /**
@@ -11,7 +13,8 @@ public class SysRole {
     // Mybatis默认是数据库下划线转驼峰命名
     private Long id;
     private String roleName;
-    private Integer enabled;
+
+    private Enabled enabled; // 是否启用的枚举
 
     private CreateInfo createInfo; // 创建信息
 
@@ -35,11 +38,11 @@ public class SysRole {
         this.roleName = roleName;
     }
 
-    public Integer getEnabled() {
+    public Enabled getEnabled() {
         return enabled;
     }
 
-    public void setEnabled(Integer enabled) {
+    public void setEnabled(Enabled enabled) {
         this.enabled = enabled;
     }
 

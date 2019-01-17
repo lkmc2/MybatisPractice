@@ -3,6 +3,7 @@ package com.lin.mapper;
 import com.lin.BaseMapperTest;
 import com.lin.model.SysPrivilege;
 import com.lin.model.SysRole;
+import com.lin.type.Enabled;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 
@@ -70,7 +71,7 @@ public class RoleMapperTest extends BaseMapperTest {
             SysRole role = new SysRole();
 
             role.setRoleName("数据库拥有者");
-            role.setEnabled(1);
+            role.setEnabled(Enabled.ENABLED);
 //            role.setCreateBy(1);
 //            role.setCreateTime(new Date());
 
@@ -99,7 +100,7 @@ public class RoleMapperTest extends BaseMapperTest {
             SysRole role = new SysRole();
 
             role.setRoleName("数据库拥有者");
-            role.setEnabled(1);
+            role.setEnabled(Enabled.ENABLED);
 //            role.setCreateBy(1);
 //            role.setCreateTime(new Date());
 
@@ -128,7 +129,7 @@ public class RoleMapperTest extends BaseMapperTest {
             SysRole role = new SysRole();
 
             role.setRoleName("数据库拥有者");
-            role.setEnabled(1);
+            role.setEnabled(Enabled.ENABLED);
 //            role.setCreateBy(1);
 //            role.setCreateTime(new Date());
 
@@ -153,20 +154,11 @@ public class RoleMapperTest extends BaseMapperTest {
             // 获取RoleMapper
             RoleMapper roleMapper = sqlSession.getMapper(RoleMapper.class);
 
-            // 修改id为1的角色信息
-            SysRole role = new SysRole();
-            role.setId(1L);
-            role.setRoleName("数据库拥有者");
-            role.setEnabled(1);
-//            role.setCreateBy(1);
-//            role.setCreateTime(new Date());
-
-            // 更新id为1的角色信息
-            int effectCount = roleMapper.updateById(role);
-            // 受影响行数必须为1
-            assertEquals(1, effectCount);
-            // 角色id会回写到role上，id非空
-            assertNotNull(role.getId());
+            // 先查出角色，然后修改角色的enabled值为disabled
+            SysRole role = roleMapper.selectById(2L);
+            assertEquals(Enabled.ENABLED, role.getEnabled());
+            role.setEnabled(Enabled.DISABLED);
+            roleMapper.updateById(role);
         } finally {
             // 为了不影响其他测试，此处选择回滚
             // 默认openSession()是不自动提交的，不回滚也不会提交到数据库
@@ -226,7 +218,7 @@ public class RoleMapperTest extends BaseMapperTest {
 
             // 犹豫数据库enabled都是1，所以给其中一个角色的enabled设置设置为0
             SysRole role = roleMapper.selectById(2L);
-            role.setEnabled(0);
+            role.setEnabled(Enabled.DISABLED);
             roleMapper.updateById(role);
 
             // 获取用户1的角色

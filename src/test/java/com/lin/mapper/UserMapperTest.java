@@ -5,6 +5,7 @@ import com.lin.model.SysPrivilege;
 import com.lin.model.SysRole;
 import com.lin.model.SysRoleExtend;
 import com.lin.model.SysUser;
+import com.lin.type.Enabled;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 
@@ -281,7 +282,7 @@ public class UserMapperTest extends BaseMapperTest {
             user.setId(1L);
             // 设置角色启用
             SysRole role = new SysRole();
-            role.setEnabled(1);
+            role.setEnabled(Enabled.ENABLED);
 
             // 根据用户id和角色的enabled状态获取用户的角色
             List<SysRole> userList = userMapper.selectRolesByUserAndRole(user, role);

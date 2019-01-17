@@ -17,6 +17,15 @@
         <package name="com.lin.model" />
     </typeAliases>
 
+    <!--设置枚举映射处理器-->
+    <!--默认枚举处理器会把枚举的值当成字符串处理-->
+    <!--EnumOrdinalTypeHandler枚举处理器会按枚举的索引进行处理-->
+    <typeHandlers>
+        <typeHandler
+                javaType="com.lin.type.Enabled"
+                handler="org.apache.ibatis.type.EnumOrdinalTypeHandler"/>
+    </typeHandlers>
+
     <!--配置数据库连接信息-->
     <environments default="development">
         <environment id="development">
