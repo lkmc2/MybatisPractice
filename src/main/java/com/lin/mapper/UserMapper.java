@@ -98,4 +98,10 @@ public interface UserMapper {
     // 使用存储过程分页查询（使用Map传递参数）
     List<SysUser> selectUserPage(Map<String, Object> params);
 
+    // 保存用户信息和角色关联信息
+    int insertUserAndRoles(@Param("user") SysUser user, @Param("roleIds") String roleIds);
+
+    // 根据用户id删除用户和角色的信息
+    int deleteUserById(Long id);
+
 }

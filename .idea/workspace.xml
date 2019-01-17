@@ -65,8 +65,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/com/lin/mapper/UserMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="434" column="92" selection-start-line="434" selection-start-column="92" selection-end-line="434" selection-end-column="92" />
+            <state relative-caret-position="323">
+              <caret line="457" column="46" selection-start-line="457" selection-start-column="46" selection-end-line="457" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -74,8 +74,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/lin/mapper/UserMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="535">
-              <caret line="98" column="18" selection-start-line="98" selection-start-column="18" selection-end-line="98" selection-end-column="18" />
+            <state relative-caret-position="290">
+              <caret line="104" column="22" selection-start-line="104" selection-start-column="8" selection-end-line="104" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -86,8 +86,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/lin/mapper/UserMapperTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="535">
-              <caret line="568" column="9" lean-forward="true" selection-start-line="568" selection-start-column="9" selection-end-line="568" selection-end-column="9" />
+            <state relative-caret-position="518">
+              <caret line="594" column="26" lean-forward="true" selection-start-line="594" selection-start-column="26" selection-end-line="594" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -169,8 +169,8 @@
         <option value="/476d677/075c43fa-9b7f-4d89-96e6-68de9372c3f3/schema/mybatis/routine/delete_user_by_id@().sql" />
         <option value="$PROJECT_DIR$/src/main/resources/com/lin/mapper/RoleMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/lin/mapper/RoleMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/lin/mapper/UserMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/lin/mapper/UserMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/lin/mapper/UserMapper.xml" />
         <option value="$PROJECT_DIR$/src/test/java/com/lin/mapper/UserMapperTest.java" />
       </list>
     </option>
@@ -215,7 +215,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547691220537" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547693151738" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect" value="MySQL" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
@@ -264,7 +264,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UserMapperTest.testSelectUserPage">
+  <component name="RunManager" selected="JUnit.UserMapperTest.testInsertUserAndRoles">
     <configuration name="RoleMapperTest.testSelectRoleByUserIdChoose" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MybatisPractice" />
       <extension name="coverage">
@@ -281,6 +281,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserMapperTest.testInsertUserAndRoles" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MybatisPractice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lin.mapper.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.lin.mapper" />
+      <option name="MAIN_CLASS_NAME" value="com.lin.mapper.UserMapperTest" />
+      <option name="METHOD_NAME" value="testInsertUserAndRoles" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserMapperTest.testSelectAllUserAndRoles" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MybatisPractice" />
       <extension name="coverage">
@@ -292,22 +308,6 @@
       <option name="PACKAGE_NAME" value="com.lin.mapper" />
       <option name="MAIN_CLASS_NAME" value="com.lin.mapper.UserMapperTest" />
       <option name="METHOD_NAME" value="testSelectAllUserAndRoles" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserMapperTest.testSelectUserAndRoleByIdSelect" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MybatisPractice" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.lin.mapper.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.lin.mapper" />
-      <option name="MAIN_CLASS_NAME" value="com.lin.mapper.UserMapperTest" />
-      <option name="METHOD_NAME" value="testSelectUserAndRoleByIdSelect" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -347,11 +347,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserMapperTest.testInsertUserAndRoles" />
         <item itemvalue="JUnit.UserMapperTest.testSelectUserPage" />
         <item itemvalue="JUnit.UserMapperTest.testSelectUserById" />
         <item itemvalue="JUnit.UserMapperTest.testSelectAllUserAndRoles" />
         <item itemvalue="JUnit.RoleMapperTest.testSelectRoleByUserIdChoose" />
-        <item itemvalue="JUnit.UserMapperTest.testSelectUserAndRoleByIdSelect" />
       </list>
     </recent_temporary>
   </component>
@@ -369,14 +369,7 @@
       <workItem from="1547517434089" duration="26481000" />
       <workItem from="1547609293923" duration="15243000" />
       <workItem from="1547642552805" duration="3924000" />
-      <workItem from="1547690426454" duration="653000" />
-    </task>
-    <task id="LOCAL-00004" summary="添加根据用户id获取角色信息，并带有当前用户名的例子">
-      <created>1547467385741</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1547467385741</updated>
+      <workItem from="1547690426454" duration="2713000" />
     </task>
     <task id="LOCAL-00005" summary="添加根据用户id获取角色信息，并带有当前用户名的例子（方式2）">
       <created>1547467909305</created>
@@ -714,43 +707,50 @@
       <option name="project" value="LOCAL" />
       <updated>1547646699800</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="添加使用存储过程分页查询的例子">
+      <created>1547691271239</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1547691271240</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UserMapperTest_testSelectUserAndRoleByIdSelect - 2019.01.16 at 16h 43m 58s.xml">
-      <configuration name="UserMapperTest.testSelectUserAndRoleByIdSelect" configurationId="JUnit" />
+    <history-entry file="UserMapperTest_testSelectUserPage - 2019.01.17 at 10h 12m 08s.xml">
+      <configuration name="UserMapperTest.testSelectUserPage" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserMapperTest_testSelectUserAndRoleByIdSelect - 2019.01.16 at 17h 05m 34s.xml">
-      <configuration name="UserMapperTest.testSelectUserAndRoleByIdSelect" configurationId="JUnit" />
+    <history-entry file="UserMapperTest_testSelectUserPage - 2019.01.17 at 10h 12m 56s.xml">
+      <configuration name="UserMapperTest.testSelectUserPage" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RoleMapperTest_testSelectRoleByUserIdChoose - 2019.01.16 at 17h 27m 39s.xml">
-      <configuration name="RoleMapperTest.testSelectRoleByUserIdChoose" configurationId="JUnit" />
+    <history-entry file="UserMapperTest_testSelectUserPage - 2019.01.17 at 10h 13m 27s.xml">
+      <configuration name="UserMapperTest.testSelectUserPage" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RoleMapperTest_testSelectRoleByUserIdChoose - 2019.01.16 at 17h 37m 11s.xml">
-      <configuration name="RoleMapperTest.testSelectRoleByUserIdChoose" configurationId="JUnit" />
+    <history-entry file="UserMapperTest_testSelectUserPage - 2019.01.17 at 10h 13m 45s.xml">
+      <configuration name="UserMapperTest.testSelectUserPage" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RoleMapperTest_testSelectRoleByUserIdChoose - 2019.01.16 at 17h 55m 50s.xml">
-      <configuration name="RoleMapperTest.testSelectRoleByUserIdChoose" configurationId="JUnit" />
+    <history-entry file="UserMapperTest_testInsertUserAndRoles - 2019.01.17 at 10h 23m 11s.xml">
+      <configuration name="UserMapperTest.testInsertUserAndRoles" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RoleMapperTest_testSelectRoleByUserIdChoose - 2019.01.16 at 17h 57m 39s.xml">
-      <configuration name="RoleMapperTest.testSelectRoleByUserIdChoose" configurationId="JUnit" />
+    <history-entry file="UserMapperTest_testInsertUserAndRoles - 2019.01.17 at 10h 28m 04s.xml">
+      <configuration name="UserMapperTest.testInsertUserAndRoles" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RoleMapperTest_testSelectRoleByUserIdChoose - 2019.01.16 at 18h 19m 59s.xml">
-      <configuration name="RoleMapperTest.testSelectRoleByUserIdChoose" configurationId="JUnit" />
+    <history-entry file="UserMapperTest_testInsertUserAndRoles - 2019.01.17 at 10h 28m 55s.xml">
+      <configuration name="UserMapperTest.testInsertUserAndRoles" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserMapperTest_testSelectAllUserAndRoles - 2019.01.16 at 21h 47m 56s.xml">
-      <configuration name="UserMapperTest.testSelectAllUserAndRoles" configurationId="JUnit" />
+    <history-entry file="UserMapperTest_testInsertUserAndRoles - 2019.01.17 at 10h 30m 05s.xml">
+      <configuration name="UserMapperTest.testInsertUserAndRoles" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserMapperTest_testSelectUserById - 2019.01.16 at 21h 50m 50s.xml">
-      <configuration name="UserMapperTest.testSelectUserById" configurationId="JUnit" />
+    <history-entry file="UserMapperTest_testInsertUserAndRoles - 2019.01.17 at 10h 32m 32s.xml">
+      <configuration name="UserMapperTest.testInsertUserAndRoles" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserMapperTest_testSelectUserById - 2019.01.16 at 21h 51m 15s.xml">
-      <configuration name="UserMapperTest.testSelectUserById" configurationId="JUnit" />
+    <history-entry file="UserMapperTest_testInsertUserAndRoles - 2019.01.17 at 10h 44m 46s.xml">
+      <configuration name="UserMapperTest.testInsertUserAndRoles" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64208000" />
+    <option name="totallyTimeSpent" value="66268000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -776,7 +776,7 @@
       <window_info id="Image Layers" order="8" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32988358" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.39068565" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.39068565" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39974126" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -859,7 +859,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="添加使用foreach标签进行更新的例子" />
     <MESSAGE value="添加bind标签的例子" />
     <MESSAGE value="添加多数据库支持的例子" />
     <MESSAGE value="添加动态根据数据库类型选择执行语句的例子" />
@@ -884,7 +883,8 @@
     <MESSAGE value="在resultMap中使用discriminator标签，动态返回查询结果类型" />
     <MESSAGE value="在discriminator标签中使用resultType" />
     <MESSAGE value="调用存储过程查询用户信息" />
-    <option name="LAST_COMMIT_MESSAGE" value="调用存储过程查询用户信息" />
+    <MESSAGE value="添加使用存储过程分页查询的例子" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加使用存储过程分页查询的例子" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -1199,27 +1199,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/lin/mapper/UserMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="434" column="92" selection-start-line="434" selection-start-column="92" selection-end-line="434" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lin/mapper/UserMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="98" column="18" selection-start-line="98" selection-start-column="18" selection-end-line="98" selection-end-column="18" />
+        <state relative-caret-position="290">
+          <caret line="104" column="22" selection-start-line="104" selection-start-column="8" selection-end-line="104" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/lin/mapper/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="457" column="46" selection-start-line="457" selection-start-column="46" selection-end-line="457" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/lin/mapper/UserMapperTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="568" column="9" lean-forward="true" selection-start-line="568" selection-start-column="9" selection-end-line="568" selection-end-column="9" />
+        <state relative-caret-position="518">
+          <caret line="594" column="26" lean-forward="true" selection-start-line="594" selection-start-column="26" selection-end-line="594" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
