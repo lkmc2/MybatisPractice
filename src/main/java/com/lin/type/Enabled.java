@@ -6,6 +6,16 @@ package com.lin.type;
  * @description 是否启用
  */
 public enum Enabled {
-    DISABLED, // 禁用
-    ENABLED // 启用
+    ENABLED(1), // 启用
+    DISABLED(0); // 禁用
+
+    private final int value;
+
+    Enabled(int value) {
+        this.value = value;
+    }
+
+    public int getValue() {
+        return value;
+    }
 }

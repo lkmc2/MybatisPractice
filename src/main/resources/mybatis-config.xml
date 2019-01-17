@@ -23,7 +23,7 @@
     <typeHandlers>
         <typeHandler
                 javaType="com.lin.type.Enabled"
-                handler="org.apache.ibatis.type.EnumOrdinalTypeHandler"/>
+                handler="com.lin.type.EnabledTypeHandler"/>
     </typeHandlers>
 
     <!--配置数据库连接信息-->
