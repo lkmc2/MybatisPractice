@@ -3,6 +3,22 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.lin.mapper.RoleMapper">
+
+    <!--开启二级缓存-->
+    <!--<cache/>-->
+    <cache
+            eviction="FIFO"
+            flushInterval="60000"
+            size="512"
+            readOnly="false"/>
+    <!--默认的二级缓存会有如下效果-->
+    <!--1.映射语句文件中所有的select语句将会被缓存-->
+    <!--2.映射语句文件中所有的insert、update、delete语句会刷新缓存-->
+    <!--3.缓存会使用LRU算法来回收-->
+    <!--4.根据时间表（如no Flush Interval，没有时间间隔），缓存不会以任何时间顺序来刷新-->
+    <!--5.缓存会被视为read/write（可读/可写）的，意味着对象检索是不共享的，
+        而且可以安全地被调用者修改，而不干扰其他调用者或者线程所做的潜在修改-->
+
     <!--返回值角色类映射关系Map-->
     <resultMap id="roleMap" type="com.lin.model.SysRole">
         <!--role相关属性-->

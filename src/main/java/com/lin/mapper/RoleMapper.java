@@ -9,9 +9,12 @@ import java.util.List;
  * @author lkmc2
  * @date 2019/1/14
  * @description 角色数据库接口
+ * 当该类只使用注解写SQL时，开启二级缓存只需要给类配置@CacheNamespace注解
+ * 如果该类同时使用了注解和xml写SQL，那么需要配置@CacheNamespaceRef注解，同时也要配置xml文件的二级缓存
  */
+@CacheNamespaceRef(RoleMapper.class)
 public interface RoleMapper {
-    // 根据id选择角色，@Select使用文本拼接和字符串数组都可以
+    // 根据id选择角色，@Selet使用文本拼接和字符串数组都可以
     // 启用了mybatis-config.xml中的mapUnderscoreToCamelCase的话，可以不给字段取别名
     // 直接使用select * from sys_role where id = #{id}
 //    @Select({"select id, role_name roleName, enabled, " +

@@ -2,14 +2,18 @@ package com.lin.model;
 
 import com.lin.type.Enabled;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * @author lkmc2
  * @date 2019/1/14
  * @description 角色表
+ * 二级缓存使用可读写缓存配置，需要进行Serializable序列化缓存
  */
-public class SysRole {
+public class SysRole implements Serializable {
+    private static final long serialVersionUID = 6320941908222932112L;
+
     // Mybatis默认是数据库下划线转驼峰命名
     private Long id;
     private String roleName;
