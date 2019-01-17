@@ -45,7 +45,8 @@
                     column="{userId=id}"/>
     </resultMap>
 
-    <select id="selectById" resultMap="userMap">
+    <!--设置flushCache="true"会关闭一级缓存-->
+    <select id="selectById" flushCache="true" resultMap="userMap">
         select * from sys_user where id = #{id}
     </select>
 
