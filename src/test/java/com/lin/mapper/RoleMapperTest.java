@@ -3,7 +3,9 @@ package com.lin.mapper;
 import com.lin.BaseMapperTest;
 import com.lin.model.SysPrivilege;
 import com.lin.model.SysRole;
+import com.lin.plugin.PageRowBounds;
 import com.lin.type.Enabled;
+import org.apache.ibatis.session.RowBounds;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 
@@ -237,6 +239,42 @@ public class RoleMapperTest extends BaseMapperTest {
                 for (SysPrivilege privilege : r.getPrivilegeList()) {
                     System.out.println("权限名：" + privilege.getPrivilegeName());
                 }
+            }
+        }
+    }
+
+    // 对自定义分页查询的测试
+    @Test
+    public void testSelectAllByRowBounds() {
+        try(SqlSession sqlSession = getSqlSession()) {
+            // 获取RoleMapper
+            RoleMapper roleMapper = sqlSession.getMapper(RoleMapper.class);
+
+            // 查询第一个，使用RowBounds类型时不会查询总数
+            RowBounds rowBounds = new RowBounds(0, 1);
+            List<SysRole> list = roleMapper.selectAll();
+            for (SysRole role : list) {
+                System.out.println("角色名：" + role.getRoleName());
+            }
+
+            // 使用PageRowBounds时会查询总数
+            PageRowBounds pageRowBounds = new PageRowBounds(0, 1);
+            list = roleMapper.selectAll(pageRowBounds);
+
+            // 获取总数
+            System.out.println("查询总数：" + pageRowBounds.getTotal());
+            for (SysRole role : list) {
+                System.out.println("角色名：" + role.getRoleName());
+            }
+
+            // 再次查询获取第二个角色
+            pageRowBounds = new PageRowBounds(1, 1);
+            list = roleMapper.selectAll(pageRowBounds);
+
+            // 获取总数
+            System.out.println("查询总数：" + pageRowBounds.getTotal());
+            for (SysRole role : list) {
+                System.out.println("角色名：" + role.getRoleName());
             }
         }
     }

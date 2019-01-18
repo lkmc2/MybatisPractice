@@ -1,5 +1,6 @@
 package com.lin.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -7,7 +8,9 @@ import java.util.Date;
  * @date 2019/1/16
  * @description 创建信息
  */
-public class CreateInfo {
+public class CreateInfo implements Serializable {
+    private static final long serialVersionUID = 6320941908222989612L;
+
     private String createBy; // 创建人
     private Date createTime; // 创建时间
 

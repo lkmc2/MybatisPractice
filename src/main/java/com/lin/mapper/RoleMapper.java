@@ -2,6 +2,7 @@ package com.lin.mapper;
 
 import com.lin.model.SysRole;
 import org.apache.ibatis.annotations.*;
+import org.apache.ibatis.session.RowBounds;
 
 import java.util.List;
 
@@ -34,8 +35,8 @@ public interface RoleMapper {
             @Result(property = "id", column = "id", id = true),
             @Result(property = "roleName", column = "role_name"),
             @Result(property = "enabled", column = "enabled"),
-            @Result(property = "createBy", column = "create_by"),
-            @Result(property = "createTime", column = "create_time")
+            @Result(property = "createInfo.createBy", column = "create_by"),
+            @Result(property = "createInfo.createTime", column = "create_time")
     })
     @Select({"select id, role_name, enabled, create_by, create_time ",
             "from sys_role",
@@ -46,6 +47,9 @@ public interface RoleMapper {
     @ResultMap("roleResultMap")
     @Select("select * from sys_role")
     List<SysRole> selectAll();
+
+    // 该方法与上一个方法同名，参数不一样，参数为RowBounds时，Mybatis会对这个类型的参数进行特殊处理
+    List<SysRole> selectAll(RowBounds rowBounds);
 
     // 将角色插入数据库，不返回主键
     @Insert({"insert into sys_role(id, role_name, enabled, create_by, create_time) ",

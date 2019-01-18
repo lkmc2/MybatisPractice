@@ -28,9 +28,14 @@
                 handler="com.lin.type.EnabledTypeHandler"/>
     </typeHandlers>
 
-    <!--启用自定义的下划线转驼峰插件-->
+
     <plugins>
-        <plugin interceptor="com.lin.plugin.CameHumpInterceptor"/>
+        <!--启用自定义的下划线转驼峰插件-->
+        <!--<plugin interceptor="com.lin.plugin.CameHumpInterceptor"/>-->
+        <!--启用自定义分页插件-->
+        <plugin interceptor="com.lin.plugin.PageInterceptor">
+            <property name="dialect" value="com.lin.plugin.MySqlDialect"/>
+        </plugin>
     </plugins>
 
     <!--配置数据库连接信息-->
